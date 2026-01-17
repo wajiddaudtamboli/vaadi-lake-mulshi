@@ -1,0 +1,329 @@
+.welcome {
+  display: flex;
+  min-height: 480px;
+  background-color: var(--color-white);
+  padding: 30px 30px 30px 0;
+}
+
+/* Left Side - Content */
+.welcome__content {
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 30px 50px 60px;
+}
+
+.welcome__badge {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--color-text-body);
+  margin-bottom: 16px;
+  text-transform: none;
+}
+
+.welcome__title {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.15;
+  color: #000;
+  margin-bottom: 22px;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.welcome__description {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-body);
+  margin-bottom: 8px;
+  max-width: 380px;
+}
+
+.welcome__cta {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: var(--fw-medium);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 24px;
+  align-self: flex-start;
+}
+
+.welcome__cta:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Right Side - Image */
+.welcome__image {
+  width: 62%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.welcome__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Image Labels */
+.welcome__labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.welcome__label {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 14px;
+  font-family: var(--font-primary);
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-dark);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.welcome__label--helipad {
+  top: 35%;
+  left: 20%;
+}
+
+.welcome__label--villas {
+  top: 30%;
+  right: 15%;
+}
+
+.welcome__label--resort {
+  top: 55%;
+  left: 25%;
+}
+
+/* Navigation Buttons */
+.welcome__nav {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.welcome__nav-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.welcome__nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .welcome {
+    padding: 25px 25px 25px 0;
+  }
+  
+  .welcome__content {
+    padding: 50px 30px 50px 50px;
+  }
+  
+  .welcome__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome {
+    padding: 20px 20px 20px 0;
+  }
+  
+  .welcome__content {
+    width: 45%;
+    padding: 40px 25px 40px 40px;
+  }
+  
+  .welcome__image {
+    width: 55%;
+  }
+  
+  .welcome__title {
+    font-size: 32px;
+  }
+  
+  .welcome__description {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  
+  .welcome__label {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    flex-direction: column-reverse;
+    min-height: 0;
+    padding: 0;
+  }
+  
+  .welcome__content {
+    width: 100%;
+    padding: 40px 25px;
+  }
+  
+  .welcome__image {
+    width: 100%;
+    height: 45vh;
+  }
+  
+  .welcome__title {
+    font-size: 28px;
+  }
+  
+  .welcome__badge {
+    font-size: 10px;
+  }
+  
+  .welcome__description {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  
+  .welcome__cta {
+    padding: 12px 24px;
+    font-size: 10px;
+  }
+  
+  .welcome__label {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+  
+  .welcome__nav {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .welcome__nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome__content {
+    padding: 30px 20px;
+  }
+  
+  .welcome__title {
+    font-size: 24px;
+  }
+  
+  .welcome__badge {
+    font-size: 9px;
+  }
+  
+  .welcome__description {
+    font-size: 11px;
+  }
+  
+  .welcome__cta {
+    padding: 10px 20px;
+    font-size: 9px;
+  }
+  
+  .welcome__image {
+    height: 40vh;
+  }
+  
+  .welcome__labels {
+    display: none;
+  }
+}
+
+/* Phone Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .welcome {
+    flex-direction: row;
+    padding: 15px 15px 15px 0;
+    min-height: 100vh;
+  }
+  
+  .welcome__content {
+    width: 40%;
+    padding: 20px 15px 20px 25px;
+  }
+  
+  .welcome__image {
+    width: 60%;
+    height: auto;
+  }
+  
+  .welcome__title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  
+  .welcome__badge {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+  
+  .welcome__description {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  
+  .welcome__cta {
+    padding: 8px 16px;
+    font-size: 9px;
+    margin-top: 16px;
+  }
+  
+  .welcome__labels {
+    display: none;
+  }
+}
+
+/* Small phones (320px - 375px) */
+@media screen and (max-width: 375px) {
+  .welcome__content {
+    padding: 25px 15px;
+  }
+  
+  .welcome__title {
+    font-size: 22px;
+  }
+  
+  .welcome__description {
+    font-size: 10px;
+  }
+}

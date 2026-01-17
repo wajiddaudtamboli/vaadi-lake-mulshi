@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors - Exact from Vaadi design */
+  --color-primary: #1B4D4D;
+  --color-primary-dark: #0F3636;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-text-dark: #1A1A1A;
+  --color-text-body: #666666;
+  --color-gold: #C4A962;
+  --color-whatsapp: #25D366;
+  
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Cormorant Garamond', serif;
+  
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Keyframes for loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Image placeholder fallback - BLACK DIV */
+.image-placeholder {
+  background-color: var(--color-black);
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Container utility */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* ===== RESPONSIVE BREAKPOINTS FOR PHONE & TABLET ===== */
+/* Phone Landscape Mode (height <= 500px) */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  html {
+    font-size: 14px;
+  }
+  
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Small phones (320px - 375px) */
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 12px;
+  }
+}
+
+/* Desktop mode on phone browsers (PWA/Desktop view) */
+@media screen and (min-width: 980px) and (max-device-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop mode on touch devices - more reliable detection */
+@media screen and (min-width: 980px) and (hover: none) and (pointer: coarse) {
+  html {
+    font-size: 15px;
+  }
+  
+  /* Ensure hero layout stays side-by-side in desktop mode */
+  .hero {
+    flex-direction: row !important;
+  }
+  
+  .hero__video {
+    width: 50% !important;
+    height: 100vh !important;
+  }
+  
+  .hero__content {
+    width: 50% !important;
+  }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button, 
+  a, 
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-body: #333333;
+  }
+}

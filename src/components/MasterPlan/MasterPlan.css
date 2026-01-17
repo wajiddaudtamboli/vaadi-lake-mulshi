@@ -1,0 +1,35 @@
+.masterplan {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+}
+
+.masterplan__image {
+  width: 100%;
+}
+
+.masterplan__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .masterplan__image img {
+    min-height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .masterplan__image img {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .masterplan__image img {
+    min-height: 250px;
+  }
+}

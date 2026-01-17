@@ -1,0 +1,285 @@
+.gallery {
+  padding: 50px 50px 60px;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.gallery__header {
+  margin-bottom: 30px;
+}
+
+.gallery__badge {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.gallery__title {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #000;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* Grid Layout - 4 columns */
+.gallery__grid {
+  display: flex;
+  gap: 0;
+}
+
+.gallery__column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Gallery Item */
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Item Heights */
+.gallery__item--tall {
+  height: 280px;
+}
+
+.gallery__item--medium {
+  height: 180px;
+}
+
+.gallery__item--short {
+  height: 150px;
+}
+
+/* Overlay */
+.gallery__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.gallery__overlay-title {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-medium);
+  font-size: 13px;
+  color: #fff;
+  margin: 0 0 4px 0;
+}
+
+.gallery__overlay-text {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .gallery {
+    padding: 45px 35px 55px;
+  }
+  
+  .gallery__item--tall {
+    height: 250px;
+  }
+  
+  .gallery__item--medium {
+    height: 160px;
+  }
+  
+  .gallery__item--short {
+    height: 130px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gallery {
+    padding: 40px 30px 50px;
+  }
+  
+  .gallery__grid {
+    gap: 10px;
+  }
+  
+  .gallery__column {
+    gap: 10px;
+  }
+  
+  .gallery__title {
+    font-size: 32px;
+  }
+  
+  .gallery__item--tall {
+    height: 220px;
+  }
+  
+  .gallery__item--medium {
+    height: 140px;
+  }
+  
+  .gallery__item--short {
+    height: 110px;
+  }
+  
+  .gallery__overlay-title {
+    font-size: 12px;
+  }
+  
+  .gallery__overlay-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 35px 20px 45px;
+  }
+  
+  .gallery__grid {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .gallery__column {
+    flex: 1 1 calc(50% - 4px);
+    min-width: calc(50% - 4px);
+    gap: 8px;
+  }
+  
+  .gallery__title {
+    font-size: 26px;
+  }
+  
+  .gallery__item--tall,
+  .gallery__item--medium,
+  .gallery__item--short {
+    height: 140px;
+  }
+  
+  .gallery__overlay {
+    padding: 12px;
+  }
+  
+  .gallery__overlay-title {
+    font-size: 11px;
+  }
+  
+  .gallery__overlay-text {
+    font-size: 9px;
+  }
+  
+  .gallery__header {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    padding: 30px 15px 40px;
+  }
+  
+  .gallery__grid {
+    gap: 6px;
+  }
+  
+  .gallery__column {
+    gap: 6px;
+  }
+  
+  .gallery__title {
+    font-size: 22px;
+  }
+  
+  .gallery__item--tall,
+  .gallery__item--medium,
+  .gallery__item--short {
+    height: 120px;
+  }
+  
+  .gallery__item {
+    border-radius: 8px;
+  }
+  
+  .gallery__overlay {
+    padding: 10px;
+  }
+  
+  .gallery__overlay-title {
+    font-size: 10px;
+  }
+  
+  .gallery__overlay-text {
+    font-size: 8px;
+  }
+}
+
+/* Phone Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .gallery {
+    padding: 30px 25px;
+  }
+  
+  .gallery__grid {
+    flex-wrap: nowrap;
+  }
+  
+  .gallery__column {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .gallery__item--tall,
+  .gallery__item--medium,
+  .gallery__item--short {
+    height: 100px;
+  }
+  
+  .gallery__title {
+    font-size: 24px;
+  }
+  
+  .gallery__header {
+    margin-bottom: 20px;
+  }
+}
+
+/* Small phones (320px - 375px) */
+@media screen and (max-width: 375px) {
+  .gallery {
+    padding: 25px 12px;
+  }
+  
+  .gallery__item--tall,
+  .gallery__item--medium,
+  .gallery__item--short {
+    height: 100px;
+  }
+  
+  .gallery__title {
+    font-size: 20px;
+  }
+  
+  .gallery__badge {
+    font-size: 9px;
+  }
+}
