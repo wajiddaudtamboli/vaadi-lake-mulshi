@@ -1,12 +1,14 @@
 import React from 'react';
 import './AboutSection.css';
 import fullLogo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 002.png';
+import aboutImage from '../../assets/Images for Landing Pages/about.png';
 
 const AboutSection = () => {
   return (
     <section className="about" id="vaadi">
-      {/* Full-width Background - Empty */}
+      {/* Full-width Background - Image */}
       <div className="about__background">
+        <img src={aboutImage} alt="About Vaadi" className="about__background-image" />
       </div>
 
       {/* Floating White Card - Positioned Right */}
