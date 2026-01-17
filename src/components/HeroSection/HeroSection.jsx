@@ -1,21 +1,17 @@
 import React from 'react';
 import './HeroSection.css';
-import heroVideo from '../../assets/Images for Landing Pages/VN20250109_141125.mp4';
+import heroImage from '../../assets/Images for Landing Pages/Hero.png';
 
 const HeroSection = () => {
   return (
     <section className="hero" id="home">
-      {/* Left Side - Hero Video */}
+      {/* Left Side - Hero Image */}
       <div className="hero__video">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
+        <img 
+          src={heroImage}
+          alt="Hero"
           className="hero__video-player"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        />
       </div>
 
       {/* Right Side - Content */}

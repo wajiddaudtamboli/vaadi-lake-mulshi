@@ -1,6 +1,5 @@
 import React from 'react';
 import './VideoSection.css';
-import sectionVideo from '../../assets/Images for Landing Pages/Untitled video - Made with Clipchamp (7).mp4';
 
 const VideoSection = () => {
   return (
@@ -12,7 +11,7 @@ const VideoSection = () => {
         playsInline
         className="video-section__bg"
       >
-        <source src={sectionVideo} type="video/mp4" />
+        <source src="https://drive.google.com/uc?export=download&id=1zdAbRT9YxFEHK8WVo_9AjhyMbRL5cOo-" type="video/mp4" />
       </video>
       <div className="video-section__overlay"></div>
     </section>

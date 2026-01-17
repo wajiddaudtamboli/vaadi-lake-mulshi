@@ -1,6 +1,5 @@
 import React from 'react';
 import './AboutSection.css';
-import aboutVideo from '../../assets/Images for Landing Pages/VN20250104_235923 (1).mp4';
 import fullLogo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 002.png';
 
 const AboutSection = () => {
@@ -15,7 +14,7 @@ const AboutSection = () => {
           playsInline
           className="about__video"
         >
-          <source src={aboutVideo} type="video/mp4" />
+          <source src="https://drive.google.com/uc?export=download&id=1zdAbRT9YxFEHK8WVo_9AjhyMbRL5cOo-" type="video/mp4" />
         </video>
       </div>
 

@@ -10,7 +10,7 @@
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .video-section__overlay {
