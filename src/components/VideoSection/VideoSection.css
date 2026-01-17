@@ -8,9 +8,9 @@
 
 .video-section__bg {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: cover;
+  background-color: #ffffff; /* Blank white background */
 }
 
 .video-section__overlay {
