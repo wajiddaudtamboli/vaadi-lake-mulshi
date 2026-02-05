@@ -85,10 +85,11 @@
   letter-spacing: 0.96px;
   color: #303030;
   margin: 0;
-  padding: 20px 40px 10px;
+  padding: 20px 0 10px 0;
   position: relative;
   z-index: 2;
   background: transparent;
+  text-align: left;
 }
 
 .title span {
