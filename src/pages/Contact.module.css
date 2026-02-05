@@ -79,6 +79,7 @@
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: 48px;
   font-weight: 700;
+  font-style: italic;
   line-height: 60px;
   letter-spacing: 0.96px;
   color: #303030;
@@ -95,8 +96,15 @@
   margin-bottom: 30px;
 }
 
-.infoBlock {
+.addressGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   margin-bottom: 30px;
+}
+
+.infoBlock {
+  margin-bottom: 0;
 }
 
 .infoLabel {
@@ -112,10 +120,10 @@
 
 .infoText {
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0.17px;
+  line-height: 26px;
+  letter-spacing: 0.15px;
   color: #000000;
   margin: 0;
 }
@@ -124,7 +132,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .phoneBlock a {

@@ -37,20 +37,25 @@ const Contact = () => {
           </h1>
 
           <div className={styles.infoCard}>
-            <div className={styles.infoBlock}>
-              <p className={styles.infoLabel}>SITE ADDRESS</p>
-              <p className={styles.infoText}>
-                Vaadi Estate, Lonavala Road Village Shiravli, Taluka, Mulshi, Maharashtra 412108
-              </p>
-            </div>
-            
-            <div className={styles.infoBlock}>
-              <p className={styles.infoLabel}>CORPORATE OFFICE</p>
-              <p className={styles.infoText}>
-                Capricorn Group,<br />
-                192 Dhole Patil Road,<br />
-                Pune, India- 411001
-              </p>
+            <div className={styles.addressGrid}>
+              <div className={styles.infoBlock}>
+                <p className={styles.infoLabel}>SITE ADDRESS</p>
+                <p className={styles.infoText}>
+                  Vaadi Estate, Lonavala<br />
+                  Road Village Shiravli,<br />
+                  Taluka, Mulshi,<br />
+                  Maharashtra 412108
+                </p>
+              </div>
+              
+              <div className={styles.infoBlock}>
+                <p className={styles.infoLabel}>CORPORATE OFFICE</p>
+                <p className={styles.infoText}>
+                  Capricorn Group,<br />
+                  192 Dhole Patil Road,<br />
+                  Pune, India- 411001
+                </p>
+              </div>
             </div>
 
             <div className={styles.phoneGrid}>
