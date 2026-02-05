@@ -35,7 +35,6 @@ const Contact = () => {
             <span>Get in Touch</span>
             <span>With Us</span>
           </h1>
-
           <div className={styles.infoCard}>
             <div className={styles.addressGrid}>
               <div className={styles.infoBlock}>

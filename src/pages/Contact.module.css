@@ -84,8 +84,8 @@
   letter-spacing: 0.96px;
   color: #303030;
   margin: 0;
-  padding-bottom: 30px;
-  background: #ffffff;
+  padding: 0;
+  text-align: left;
 }
 
 .title span {
@@ -94,7 +94,7 @@
 
 .infoCard {
   background: #d1d1d7;
-  padding: 40px;
+  padding: 30px 40px 40px;
   margin-top: 0;
 }
 
