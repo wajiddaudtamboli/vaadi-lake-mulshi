@@ -1,0 +1,391 @@
+/* Fonts loaded from global.css */
+
+.aboutViewport {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-overlay: rgba(0, 0, 0, 0.2);
+  --color-gray-300: #B6B7BB;
+  --color-button: #004D66;
+  --color-form-label: #374151;
+  --color-form-placeholder: #6B7280;
+  --color-form-border: #D1D5DB;
+  --color-form-heading: #111827;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-31: 31px;
+  --about-scale: min(1, calc(100vw / 1440));
+  position: relative;
+  width: 100vw;
+  height: calc(5322px * var(--about-scale));
+  background: var(--color-white);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutPage {
+  position: relative;
+  width: 100vw;
+  height: 5322px;
+  transform: scale(var(--about-scale));
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100vw;
+  height: 684px;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100vw;
+  height: 684px;
+  background: var(--color-overlay);
+}
+
+.brandLogo {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 98.38px;
+  height: 118px;
+  object-fit: contain;
+}
+
+.partnerLogo {
+  position: absolute;
+  left: 1242px;
+  top: 32px;
+  width: 117.52px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.nav {
+  position: absolute;
+  left: 750px;
+  top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 520px;
+}
+
+.navLink {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  color: var(--color-black);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    gap: 20px;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 14px;
+    max-width: 360px;
+  }
+  .navLink {
+    font-size: 14px;
+  }
+}
+
+.welcomeBlock {
+  position: absolute;
+  left: 112px;
+  top: 796px;
+  width: 447px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.welcomeLabel {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.08px;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.welcomeTitle {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.welcomeTitle span {
+  display: block;
+}
+
+.welcomeDivider {
+  position: absolute;
+  left: 634px;
+  top: 812px;
+  width: 1px;
+  height: 135px;
+  background: var(--color-black);
+}
+
+.welcomeDescription {
+  position: absolute;
+  left: 709px;
+  top: 831px;
+  width: 619px;
+  height: 96px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.sliderImage {
+  position: absolute;
+  left: 0px;
+  top: 1043px;
+  width: 100vw;
+  height: 550px;
+  object-fit: cover;
+}
+
+.sliderChevronLeft {
+  width: 48px;
+  height: 48px;
+}
+
+.sliderChevronRight {
+  width: 48px;
+  height: 48px;
+}
+
+.sliderButtonLeft {
+  position: absolute;
+  left: 32px;
+  top: 1294px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.sliderButtonRight {
+  position: absolute;
+  left: 1360px;
+  top: 1294px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.eleganceImage {
+  position: absolute;
+  left: 0px;
+  top: 1593px;
+  width: 100vw;
+  height: 535px;
+  object-fit: cover;
+}
+
+.eleganceContent {
+  position: absolute;
+  left: 175px;
+  top: 1754.96px;
+  width: 630px;
+}
+
+.eleganceKicker {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.08px;
+  color: var(--color-black);
+  text-align: left;
+  margin-left: 4px;
+}
+
+.eleganceTitle {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  text-align: left;
+  margin-top: 8px;
+}
+
+.eleganceDescription {
+  margin-top: 16px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.eleganceEmblem {
+  position: absolute;
+  left: 949px;
+  top: 1705px;
+  width: 311.76px;
+  height: auto;
+}
+
+.amenitiesTitle {
+  position: absolute;
+  left: 447px;
+  top: 2240px;
+  width: 546px;
+  height: 60px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.amenitiesImage {
+  position: absolute;
+  left: 0px;
+  top: 2300px;
+  width: 100vw;
+  height: 658px;
+  object-fit: cover;
+}
+
+.mapSection {
+  position: absolute;
+  left: 0px;
+  top: 3118px;
+  width: 100vw;
+  height: 650px;
+}
+
+.mapIframe {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 650px;
+  border: 0;
+}
+
+.freshSection {
+  position: absolute;
+  left: 0px;
+  top: 3880px;
+  width: 100vw;
+  height: 920px;
+}
+
+.freshAccent {
+  position: absolute;
+  left: 590px;
+  top: 362px;
+  width: 285px;
+  height: 446px;
+  background: var(--color-gray-300);
+}
+
+.freshImage {
+  position: absolute;
+  left: 0px;
+  top: 112px;
+  width: 797px;
+  height: 627px;
+  object-fit: fill;
+}
+
+.freshContent {
+  position: absolute;
+  left: 845px;
+  top: 112px;
+  width: 565px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.freshKicker {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 4.08px;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.freshTitle {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.96px;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.freshDescription {
+  max-width: 427px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.footerWrap {
+  position: absolute;
+  left: 0px;
+  top: 4912px;
+  width: 100vw;
+  height: 410px;
+  overflow: hidden;
+}

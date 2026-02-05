@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Colors - Exact from Vaadi design */
@@ -14,6 +14,8 @@
   /* Typography */
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Cormorant Garamond', serif;
+  --font-gilroy: 'Poppins', Arial, sans-serif;
+  --font-optima: 'Cormorant Garamond', 'Times New Roman', serif;
   
   /* Font Weights */
   --fw-light: 300;
@@ -45,6 +47,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+
 
 a {
   text-decoration: none;

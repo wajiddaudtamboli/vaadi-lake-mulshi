@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 003.png';
 import capricornLogo from '../../assets/Images for Landing Pages/Frame 33380.png';
@@ -15,11 +16,11 @@ const Navbar = () => {
 
       {/* Right - Navigation Links + Partner Section */}
       <nav className={`navbar__nav ${mobileMenuOpen ? 'navbar__nav--open' : ''}`}>
-        <a href="#home" className="navbar__link">HOME</a>
-        <a href="#vaadi" className="navbar__link">VAADI</a>
-        <a href="#amenities" className="navbar__link">AMENITIES</a>
-        <a href="#blogs" className="navbar__link">BLOGS</a>
-        <a href="#contact" className="navbar__link">CONTACT</a>
+        <Link to="/" className="navbar__link">HOME</Link>
+        <Link to="/about" className="navbar__link">VAADI</Link>
+        <Link to="/lifestyle" className="navbar__link">LIFESTYLE</Link>
+        <a href="#" className="navbar__link">BLOGS</a>
+        <Link to="/contact" className="navbar__link">CONTACT</Link>
         <div className="navbar__partner-section">
           <img src={capricornLogo} alt="Capricorn" className="navbar__capricorn" />
         </div>
