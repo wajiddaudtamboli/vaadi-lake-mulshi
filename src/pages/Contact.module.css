@@ -64,10 +64,11 @@
 .contactPage {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 60px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 180px 60px 80px;
+  padding: 140px 60px 80px;
 }
 
 /* Left Column - Info */
@@ -87,7 +88,7 @@
   letter-spacing: 0.96px;
   color: #303030;
   margin: 0 0 0 -20px;
-  padding: 20px 0 10px 0;
+  padding: 0 0 10px 0;
   position: relative;
   z-index: 2;
   background: transparent;
@@ -101,8 +102,7 @@
 .infoCard {
   background: #d1d1d7;
   padding: 30px 40px 40px;
-  margin-top: -90px;
-  padding-top: 100px;
+  margin-top: 0;
 }
 
 .addressGrid {
