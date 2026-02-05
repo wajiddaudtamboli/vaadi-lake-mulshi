@@ -1,29 +1,20 @@
 /* Fonts loaded from global.css */
 
 .pageWrapper {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: #ffffff;
 }
 
-.contactPage {
-  position: relative;
-  width: 1440px;
-  height: 750px;
-  margin: 0 auto;
-  margin-top: 80px;
-  overflow: visible;
-  zoom: 0.9;
-}
-
+/* Navigation */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,8 +25,8 @@
 }
 
 .navBrandLogo {
-  width: 98.38px;
-  height: 118px;
+  width: 80px;
+  height: 96px;
   object-fit: contain;
 }
 
@@ -43,8 +34,6 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  position: absolute;
-  left: 750px;
 }
 
 .navPartnerLogo {
@@ -61,22 +50,39 @@
   letter-spacing: 0.32px;
   color: #000000;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.navLink:hover {
+  opacity: 0.7;
+}
+
+/* Main Contact Section */
+.contactPage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 180px 60px 80px;
+}
+
+/* Left Column - Info */
+.infoColumn {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .title {
-  position: absolute;
-  left: 100px;
-  top: 226px;
-  width: 322px;
-  height: 120px;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 60px;
   letter-spacing: 0.96px;
   color: #303030;
-  text-align: left;
-  z-index: 3;
+  margin: 0 0 40px;
 }
 
 .title span {
@@ -84,31 +90,13 @@
 }
 
 .infoCard {
-  position: absolute;
-  left: 150px;
-  top: 257px;
-  width: 473px;
-  height: 452px;
   background: #d1d1d7;
-  z-index: 1;
+  padding: 40px;
+  margin-bottom: 30px;
 }
 
 .infoBlock {
-  position: absolute;
-  left: 182px;
-  top: 390px;
-  width: 202px;
-  height: 163px;
-  z-index: 2;
-}
-
-.infoBlockOffice {
-  position: absolute;
-  left: 416px;
-  top: 389px;
-  width: 170px;
-  height: 132px;
-  z-index: 2;
+  margin-bottom: 30px;
 }
 
 .infoLabel {
@@ -119,6 +107,7 @@
   letter-spacing: 0.14px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0 0 8px;
 }
 
 .infoText {
@@ -128,39 +117,17 @@
   line-height: 31px;
   letter-spacing: 0.17px;
   color: #000000;
-  white-space: pre-line;
+  margin: 0;
 }
 
-.officeLabel {
-  position: absolute;
-  left: 182px;
-  top: 583px;
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0.14px;
-  text-transform: uppercase;
-  z-index: 2;
+.phoneGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.directLabel {
-  position: absolute;
-  left: 396px;
-  top: 583px;
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0.14px;
-  text-transform: uppercase;
-  z-index: 2;
-}
-
-.officePhone {
-  position: absolute;
-  left: 182px;
-  top: 622px;
+.phoneBlock a {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -168,198 +135,79 @@
   letter-spacing: 0.17px;
   color: #000000;
   text-decoration: none;
-  z-index: 2;
+  display: block;
 }
 
-.officePhoneAlt {
-  position: absolute;
-  left: 182px;
-  top: 653px;
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0.17px;
-  color: #000000;
-  text-decoration: none;
-  z-index: 2;
+.phoneBlock a:hover {
+  text-decoration: underline;
 }
 
-.directPhone {
-  position: absolute;
-  left: 396px;
-  top: 622px;
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0.17px;
-  color: #000000;
-  text-decoration: none;
-  z-index: 2;
+/* Right Column - Form */
+.formColumn {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .form {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.labelName,
-.labelPhone,
-.labelEmail,
-.labelAvailability,
-.labelMessage {
-  position: absolute;
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroupFull {
+  grid-column: 1 / -1;
+}
+
+.formLabel {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #000000;
   text-transform: uppercase;
-  text-align: left;
+  margin-bottom: 12px;
 }
 
-.labelName {
-  left: 723px;
-  top: 257px;
-  width: 50px;
-  text-align: left;
-}
-
-.labelEmail {
-  left: 1058px;
-  top: 257px;
-  width: 42px;
-}
-
-.labelPhone {
-  left: 723px;
-  top: 361px;
-  width: 120px;
-  white-space: nowrap;
-  text-align: left;
-}
-
-.labelAvailability {
-  left: 1062px;
-  top: 361px;
-  width: 83px;
-}
-
-.labelMessage {
-  left: 723px;
-  top: 465px;
-  width: 62px;
-}
-
-.inputName,
-.inputEmail,
-.inputPhone,
-.inputAvailability,
-.inputMessage {
-  position: absolute;
+.formInput,
+.formTextarea {
   border: none;
+  border-bottom: 1px solid #000000;
   background: transparent;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #000000;
-  padding: 0;
+  padding: 12px 0;
   outline: none;
-  text-align: center;
+  width: 100%;
 }
 
-.inputName {
-  left: 729px;
-  top: 305px;
-  width: 306px;
-  height: 16px;
-}
-
-.inputEmail {
-  left: 1064px;
-  top: 305px;
-  width: 306px;
-  height: 16px;
-}
-
-.inputPhone {
-  left: 732px;
-  top: 409px;
-  width: 306px;
-  height: 16px;
-}
-
-.inputAvailability {
-  left: 1064px;
-  top: 409px;
-  width: 306px;
-  height: 16px;
-}
-
-.inputMessage {
-  left: 734px;
-  top: 513px;
-  width: 641px;
-  height: 16px;
-}
-
-.inputName::placeholder,
-.inputEmail::placeholder,
-.inputPhone::placeholder,
-.inputAvailability::placeholder,
-.inputMessage::placeholder {
+.formInput::placeholder,
+.formTextarea::placeholder {
   color: #c1c1c5;
 }
 
-.lineName,
-.lineEmail,
-.linePhone,
-.lineAvailability,
-.lineMessage {
-  position: absolute;
-  height: 1px;
-  background: #000000;
-}
-
-.lineName {
-  left: 719px;
-  top: 329px;
-  width: 306px;
-}
-
-.lineEmail {
-  left: 1054px;
-  top: 329px;
-  width: 306px;
-}
-
-.linePhone {
-  left: 719px;
-  top: 433px;
-  width: 306px;
-}
-
-.lineAvailability {
-  left: 1054px;
-  top: 433px;
-  width: 306px;
-}
-
-.lineMessage {
-  left: 719px;
-  top: 625px;
-  width: 641px;
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 .submitButton {
-  position: absolute;
-  left: 1257px;
-  top: 673px;
-  padding: 10px 24px;
+  align-self: flex-end;
+  padding: 12px 32px;
   background: #004d66;
   color: #ffffff;
   border: 1px solid #004d66;
@@ -370,35 +218,31 @@
   line-height: 24px;
   letter-spacing: 0.16px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 
+.submitButton:hover {
+  background: #003d52;
+  transform: translateY(-2px);
+}
+
+/* Hero Banner Section */
 .heroSection {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 450px;
-  margin: 0;
-  padding: 0;
-  left: 0;
 }
 
 .heroImage {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
 }
 
 .heroOverlay {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
 }
 
 .heroText {
@@ -406,12 +250,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  z-index: 2;
+  text-align: center;
 }
 
 .heroKicker {
@@ -421,7 +260,7 @@
   line-height: 30px;
   letter-spacing: 4.08px;
   color: #ffffff;
-  text-align: center;
+  margin: 0 0 8px;
 }
 
 .heroTitle {
@@ -431,72 +270,36 @@
   line-height: 60px;
   letter-spacing: 0.96px;
   color: #ffffff;
-  text-align: center;
-}
-
-.footerWrap {
-  width: 100vw;
   margin: 0;
-  padding: 0;
 }
 
-/* Responsive Design */
+/* Footer */
+.footerWrap {
+  width: 100%;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablet Landscape */
 @media (max-width: 1200px) {
   .contactPage {
-    width: 90vw;
-    zoom: 0.8;
+    padding: 160px 40px 60px;
+    gap: 40px;
   }
   
   .navLinks {
-    left: 50%;
-    transform: translateX(-50%);
     gap: 20px;
   }
-}
-
-@media (max-width: 768px) {
-  .contactPage {
-    width: 95vw;
-    height: auto;
-    zoom: 0.7;
-    margin-top: 120px;
-  }
   
-  .nav {
-    padding: 15px 20px;
-    flex-direction: column;
-    height: auto;
-    gap: 15px;
-  }
-  
-  .navBrandLogo {
-    width: 80px;
-    height: 96px;
-  }
-  
-  .navLinks {
-    position: relative;
-    left: auto;
-    transform: none;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .heroSection {
-    height: 300px;
+  .navLink {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 480px) {
-  .contactPage {
-    width: 100vw;
-    zoom: 0.6;
-    margin-top: 150px;
-  }
-  
+/* Tablet Portrait */
+@media (max-width: 1024px) {
   .nav {
-    padding: 10px 15px;
+    padding: 16px 24px;
   }
   
   .navBrandLogo {
@@ -505,11 +308,184 @@
   }
   
   .navLinks {
-    gap: 10px;
+    gap: 16px;
+  }
+  
+  .navLink {
     font-size: 12px;
+  }
+  
+  .navPartnerLogo {
+    width: 80px;
+  }
+  
+  .contactPage {
+    flex-direction: column;
+    padding: 140px 30px 50px;
+    gap: 50px;
+  }
+  
+  .infoColumn,
+  .formColumn {
+    max-width: 100%;
+  }
+  
+  .title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .heroSection {
+    height: 350px;
+  }
+  
+  .heroTitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+/* Mobile Landscape / Large Phone */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  
+  .navBrandLogo {
+    width: 50px;
+    height: 60px;
+  }
+  
+  .navPartnerLogo {
+    width: 70px;
+    order: 2;
+  }
+  
+  .navLinks {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .navLink {
+    font-size: 11px;
+  }
+  
+  .contactPage {
+    padding: 160px 20px 40px;
+    gap: 40px;
+  }
+  
+  .title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  
+  .infoCard {
+    padding: 30px 20px;
+  }
+  
+  .phoneGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .heroSection {
+    height: 300px;
+  }
+  
+  .heroKicker {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .heroTitle {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .nav {
+    padding: 10px 12px;
+  }
+  
+  .navBrandLogo {
+    width: 45px;
+    height: 54px;
+  }
+  
+  .navPartnerLogo {
+    width: 60px;
+  }
+  
+  .navLinks {
+    gap: 8px;
+  }
+  
+  .navLink {
+    font-size: 10px;
+  }
+  
+  .contactPage {
+    padding: 150px 16px 30px;
+    gap: 30px;
+  }
+  
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+  
+  .infoCard {
+    padding: 24px 16px;
+  }
+  
+  .infoLabel {
+    font-size: 12px;
+  }
+  
+  .infoText {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  
+  .phoneBlock a {
+    font-size: 15px;
+  }
+  
+  .formLabel {
+    font-size: 12px;
+  }
+  
+  .submitButton {
+    width: 100%;
+    text-align: center;
   }
   
   .heroSection {
     height: 250px;
+  }
+  
+  .heroKicker {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  
+  .heroTitle {
+    font-size: 26px;
+    line-height: 34px;
   }
 }

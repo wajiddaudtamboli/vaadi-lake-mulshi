@@ -5,19 +5,8 @@
   --color-white: #FFFFFF;
   --color-overlay: rgba(0, 0, 0, 0.2);
   --color-gray-300: #B6B7BB;
-  --color-button: #004D66;
-  --color-form-label: #374151;
-  --color-form-placeholder: #6B7280;
-  --color-form-border: #D1D5DB;
-  --color-form-heading: #111827;
-  --space-8: 8px;
-  --space-16: 16px;
-  --space-24: 24px;
-  --space-31: 31px;
-  --about-scale: min(1, calc(100vw / 1440));
-  position: relative;
-  width: 100vw;
-  height: calc(5322px * var(--about-scale));
+  width: 100%;
+  min-height: 100vh;
   background: var(--color-white);
   overflow-x: hidden;
   margin: 0;
@@ -25,58 +14,63 @@
 }
 
 .aboutPage {
-  position: relative;
-  width: 100vw;
-  height: 5322px;
-  transform: scale(var(--about-scale));
-  transform-origin: top left;
+  width: 100%;
   overflow: hidden;
 }
 
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+}
+
 .heroImage {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100vw;
-  height: 684px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .heroOverlay {
   position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100vw;
-  height: 684px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background: var(--color-overlay);
+  pointer-events: none;
+}
+
+/* Navigation */
+.navHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px 40px;
+  z-index: 10;
 }
 
 .brandLogo {
-  position: absolute;
-  left: 32px;
-  top: 32px;
-  width: 98.38px;
+  width: 98px;
   height: 118px;
   object-fit: contain;
 }
 
 .partnerLogo {
-  position: absolute;
-  left: 1242px;
-  top: 32px;
-  width: 117.52px;
+  width: 118px;
   height: 24px;
   object-fit: contain;
 }
 
 .nav {
-  position: absolute;
-  left: 750px;
-  top: 36px;
   display: flex;
   align-items: center;
   gap: 32px;
-  max-width: 520px;
 }
 
 .navLink {
@@ -86,36 +80,31 @@
   line-height: 16px;
   letter-spacing: 0.32px;
   color: var(--color-black);
-  text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.3s;
 }
 
-@media (max-width: 1200px) {
-  .nav {
-    gap: 20px;
-    max-width: 420px;
-  }
+.navLink:hover {
+  opacity: 0.7;
 }
 
-@media (max-width: 1024px) {
-  .nav {
-    gap: 14px;
-    max-width: 360px;
-  }
-  .navLink {
-    font-size: 14px;
-  }
+/* Welcome Section */
+.welcomeSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 112px;
+  gap: 60px;
 }
 
 .welcomeBlock {
-  position: absolute;
-  left: 112px;
-  top: 796px;
-  width: 447px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  max-width: 447px;
+  flex-shrink: 0;
 }
 
 .welcomeLabel {
@@ -136,6 +125,7 @@
   letter-spacing: 0.96px;
   color: var(--color-black);
   text-align: center;
+  margin: 0;
 }
 
 .welcomeTitle span {
@@ -143,92 +133,96 @@
 }
 
 .welcomeDivider {
-  position: absolute;
-  left: 634px;
-  top: 812px;
   width: 1px;
   height: 135px;
   background: var(--color-black);
+  flex-shrink: 0;
 }
 
 .welcomeDescription {
-  position: absolute;
-  left: 709px;
-  top: 831px;
-  width: 619px;
-  height: 96px;
+  max-width: 619px;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.16px;
   color: var(--color-black);
-  text-align: left;
+  margin: 0;
+}
+
+/* Slider Section */
+.sliderSection {
+  position: relative;
+  width: 100%;
+  height: 550px;
 }
 
 .sliderImage {
-  position: absolute;
-  left: 0px;
-  top: 1043px;
-  width: 100vw;
-  height: 550px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.sliderChevronLeft {
+.sliderButtonLeft,
+.sliderButtonRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 48px;
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.sliderChevronRight {
-  width: 48px;
-  height: 48px;
+.sliderButtonLeft:hover,
+.sliderButtonRight:hover {
+  background: rgba(255, 255, 255, 1);
 }
 
 .sliderButtonLeft {
-  position: absolute;
   left: 32px;
-  top: 1294px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
 }
 
 .sliderButtonRight {
-  position: absolute;
-  left: 1360px;
-  top: 1294px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
+  right: 32px;
+}
+
+.sliderChevronLeft,
+.sliderChevronRight {
+  width: 24px;
+  height: 24px;
+}
+
+/* Elegance Section */
+.eleganceSection {
+  position: relative;
+  width: 100%;
+  min-height: 535px;
 }
 
 .eleganceImage {
-  position: absolute;
-  left: 0px;
-  top: 1593px;
-  width: 100vw;
+  width: 100%;
   height: 535px;
   object-fit: cover;
 }
 
-.eleganceContent {
+.eleganceOverlay {
   position: absolute;
-  left: 175px;
-  top: 1754.96px;
-  width: 630px;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+}
+
+.eleganceContent {
+  max-width: 630px;
 }
 
 .eleganceKicker {
@@ -238,8 +232,7 @@
   line-height: 30px;
   letter-spacing: 4.08px;
   color: var(--color-black);
-  text-align: left;
-  margin-left: 4px;
+  margin: 0 0 8px 4px;
 }
 
 .eleganceTitle {
@@ -249,105 +242,91 @@
   line-height: 60px;
   letter-spacing: 0.96px;
   color: var(--color-black);
-  text-align: left;
-  margin-top: 8px;
+  margin: 0 0 16px 0;
 }
 
 .eleganceDescription {
-  margin-top: 16px;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.16px;
   color: var(--color-black);
-  text-align: left;
+  margin: 0;
 }
 
 .eleganceEmblem {
-  position: absolute;
-  left: 949px;
-  top: 1705px;
-  width: 311.76px;
+  width: 312px;
   height: auto;
 }
 
+/* Amenities Section */
+.amenitiesSection {
+  text-align: center;
+  padding: 80px 0 0;
+}
+
 .amenitiesTitle {
-  position: absolute;
-  left: 447px;
-  top: 2240px;
-  width: 546px;
-  height: 60px;
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 60px;
   letter-spacing: 0.96px;
   color: var(--color-black);
-  text-align: center;
+  margin: 0 0 40px;
 }
 
 .amenitiesImage {
-  position: absolute;
-  left: 0px;
-  top: 2300px;
-  width: 100vw;
-  height: 658px;
+  width: 100%;
+  height: auto;
+  max-height: 658px;
   object-fit: cover;
 }
 
+/* Map Section */
 .mapSection {
-  position: absolute;
-  left: 0px;
-  top: 3118px;
-  width: 100vw;
+  width: 100%;
   height: 650px;
 }
 
 .mapIframe {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100vw;
-  height: 650px;
+  width: 100%;
+  height: 100%;
   border: 0;
 }
 
+/* Fresh Perspective Section */
 .freshSection {
-  position: absolute;
-  left: 0px;
-  top: 3880px;
-  width: 100vw;
-  height: 920px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  min-height: 700px;
 }
 
 .freshAccent {
   position: absolute;
-  left: 590px;
-  top: 362px;
+  right: calc(50% - 140px);
+  top: 50%;
+  transform: translateY(-50%);
   width: 285px;
   height: 446px;
   background: var(--color-gray-300);
+  z-index: 0;
 }
 
 .freshImage {
-  position: absolute;
-  left: 0px;
-  top: 112px;
-  width: 797px;
-  height: 627px;
-  object-fit: fill;
+  width: 55%;
+  max-width: 797px;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .freshContent {
-  position: absolute;
-  left: 845px;
-  top: 112px;
-  width: 565px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
+  flex: 1;
+  padding: 0 100px 0 50px;
+  z-index: 1;
 }
 
 .freshKicker {
@@ -357,7 +336,7 @@
   line-height: 30px;
   letter-spacing: 4.08px;
   color: var(--color-black);
-  text-align: left;
+  margin: 0 0 8px;
 }
 
 .freshTitle {
@@ -367,7 +346,7 @@
   line-height: 60px;
   letter-spacing: 0.96px;
   color: var(--color-black);
-  text-align: left;
+  margin: 0 0 16px;
 }
 
 .freshDescription {
@@ -378,14 +357,435 @@
   line-height: 24px;
   letter-spacing: 0.16px;
   color: var(--color-black);
-  text-align: left;
+  margin: 0;
 }
 
+/* Footer */
 .footerWrap {
-  position: absolute;
-  left: 0px;
-  top: 4912px;
-  width: 100vw;
-  height: 410px;
-  overflow: hidden;
+  width: 100%;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablet Landscape */
+@media (max-width: 1200px) {
+  .navHeader {
+    padding: 24px 30px;
+  }
+  
+  .nav {
+    gap: 20px;
+  }
+  
+  .navLink {
+    font-size: 14px;
+  }
+  
+  .welcomeSection {
+    padding: 60px 60px;
+    gap: 40px;
+  }
+  
+  .eleganceOverlay {
+    padding: 40px 60px;
+  }
+  
+  .eleganceEmblem {
+    width: 250px;
+  }
+  
+  .freshContent {
+    padding: 0 60px 0 40px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 1024px) {
+  .navHeader {
+    padding: 20px;
+  }
+  
+  .brandLogo {
+    width: 70px;
+    height: 84px;
+  }
+  
+  .partnerLogo {
+    width: 100px;
+  }
+  
+  .nav {
+    gap: 16px;
+  }
+  
+  .navLink {
+    font-size: 12px;
+    letter-spacing: 0.2px;
+  }
+  
+  .welcomeSection {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 30px;
+  }
+  
+  .welcomeDivider {
+    width: 100px;
+    height: 1px;
+  }
+  
+  .welcomeDescription {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .welcomeTitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .sliderSection {
+    height: 400px;
+  }
+  
+  .eleganceSection {
+    min-height: 0;
+  }
+  
+  .eleganceImage {
+    height: 400px;
+  }
+  
+  .eleganceOverlay {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 40px;
+    gap: 20px;
+  }
+  
+  .eleganceContent {
+    max-width: 100%;
+  }
+  
+  .eleganceTitle {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  
+  .eleganceEmblem {
+    width: 200px;
+    align-self: center;
+  }
+  
+  .amenitiesTitle {
+    font-size: 36px;
+    line-height: 46px;
+    padding: 0 20px;
+  }
+  
+  .mapSection {
+    height: 450px;
+  }
+  
+  .freshSection {
+    flex-direction: column;
+    padding: 60px 20px;
+    min-height: 0;
+  }
+  
+  .freshAccent {
+    display: none;
+  }
+  
+  .freshImage {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .freshContent {
+    padding: 40px 20px 0;
+    text-align: center;
+  }
+  
+  .freshDescription {
+    max-width: 100%;
+  }
+  
+  .freshTitle {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+/* Mobile Landscape / Large Phone */
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 500px;
+    max-height: 600px;
+  }
+  
+  .navHeader {
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .brandLogo {
+    width: 60px;
+    height: 72px;
+  }
+  
+  .partnerLogo {
+    width: 80px;
+    order: 2;
+  }
+  
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .navLink {
+    font-size: 11px;
+  }
+  
+  .welcomeSection {
+    padding: 40px 20px;
+  }
+  
+  .welcomeLabel {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .welcomeTitle {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  
+  .welcomeDescription {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .sliderSection {
+    height: 300px;
+  }
+  
+  .sliderButtonLeft,
+  .sliderButtonRight {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .sliderButtonLeft {
+    left: 16px;
+  }
+  
+  .sliderButtonRight {
+    right: 16px;
+  }
+  
+  .sliderChevronLeft,
+  .sliderChevronRight {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .eleganceImage {
+    height: 350px;
+  }
+  
+  .eleganceOverlay {
+    padding: 20px;
+  }
+  
+  .eleganceKicker {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .eleganceTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .eleganceDescription {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .eleganceEmblem {
+    width: 150px;
+  }
+  
+  .amenitiesSection {
+    padding: 60px 0 0;
+  }
+  
+  .amenitiesTitle {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+  
+  .mapSection {
+    height: 350px;
+  }
+  
+  .freshSection {
+    padding: 40px 16px;
+  }
+  
+  .freshKicker {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .freshTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .freshDescription {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .heroSection {
+    min-height: 400px;
+    max-height: 500px;
+  }
+  
+  .navHeader {
+    padding: 12px;
+  }
+  
+  .brandLogo {
+    width: 50px;
+    height: 60px;
+  }
+  
+  .partnerLogo {
+    width: 70px;
+  }
+  
+  .nav {
+    gap: 8px;
+  }
+  
+  .navLink {
+    font-size: 10px;
+    letter-spacing: 0.1px;
+  }
+  
+  .welcomeSection {
+    padding: 30px 16px;
+    gap: 20px;
+  }
+  
+  .welcomeLabel {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  
+  .welcomeTitle {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  
+  .welcomeDescription {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .sliderSection {
+    height: 220px;
+  }
+  
+  .sliderButtonLeft,
+  .sliderButtonRight {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .sliderButtonLeft {
+    left: 10px;
+  }
+  
+  .sliderButtonRight {
+    right: 10px;
+  }
+  
+  .eleganceImage {
+    height: 280px;
+  }
+  
+  .eleganceOverlay {
+    padding: 16px;
+  }
+  
+  .eleganceKicker {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  
+  .eleganceTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .eleganceDescription {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .eleganceEmblem {
+    width: 120px;
+  }
+  
+  .amenitiesSection {
+    padding: 40px 0 0;
+  }
+  
+  .amenitiesTitle {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .mapSection {
+    height: 280px;
+  }
+  
+  .freshSection {
+    padding: 30px 12px;
+  }
+  
+  .freshContent {
+    padding: 30px 12px 0;
+  }
+  
+  .freshKicker {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+  
+  .freshTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .freshDescription {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
