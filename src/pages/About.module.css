@@ -42,53 +42,19 @@
   pointer-events: none;
 }
 
-/* Navigation */
-.navHeader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 32px 40px;
-  z-index: 10;
+/* Navigation - Use global Navbar component */
+.heroSection :global(.navbar) {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.brandLogo {
-  width: 98px;
-  height: 118px;
-  object-fit: contain;
+.heroSection :global(.navbar__link) {
+  color: var(--color-black) !important;
+  text-shadow: none;
 }
 
-.partnerLogo {
-  width: 118px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.nav {
-  position: absolute;
-  left: 550px;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.navLink {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  color: var(--color-black);
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: opacity 0.3s;
-}
-
-.navLink:hover {
-  opacity: 0.7;
+.heroSection :global(.navbar__partner-section) {
+  display: flex !important;
 }
 
 /* Welcome Section */

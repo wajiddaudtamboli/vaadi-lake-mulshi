@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import styles from './About.module.css';
 import heroImage from '../assets/about/about-hero.png';
-import vaadiLogo from '../assets/about/vaadi-logo.png';
-import capricornLogo from '../assets/about/capricorn-logo.png';
 import sliderImage from '../assets/about/about-slider.png';
 import chevronLeft from '../assets/about/chevron-left.svg';
 import chevronRight from '../assets/about/chevron-right.svg';
@@ -21,18 +20,7 @@ const About = () => {
         <section className={styles.heroSection}>
           <img src={heroImage} alt="Vaadi Lake Mulshi" className={styles.heroImage} />
           <div className={styles.heroOverlay} aria-hidden="true" />
-          
-          <header className={styles.navHeader}>
-            <img src={vaadiLogo} alt="Vaadi Lake Mulshi" className={styles.brandLogo} />
-            <nav className={styles.nav}>
-              <Link to="/" className={styles.navLink}>HOME</Link>
-              <Link to="/about" className={styles.navLink}>VAADI</Link>
-              <Link to="/lifestyle" className={styles.navLink}>LIFESTYLE</Link>
-              <Link to="/contact" className={styles.navLink}>BLOGS</Link>
-              <Link to="/contact" className={styles.navLink}>CONTACT</Link>
-            </nav>
-            <img src={capricornLogo} alt="Capricorn Group" className={styles.partnerLogo} />
-          </header>
+          <Navbar />
         </section>
 
         {/* Welcome Section */}

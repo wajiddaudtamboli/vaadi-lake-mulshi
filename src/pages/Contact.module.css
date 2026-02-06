@@ -9,56 +9,28 @@
   background: #ffffff;
 }
 
-/* Navigation */
-.nav {
+/* Navigation Wrapper */
+.navWrapper {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.98);
   z-index: 1000;
-  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.98);
 }
 
-.navBrandLogo {
-  width: 80px;
-  height: 96px;
-  object-fit: contain;
+.navWrapper :global(.navbar) {
+  position: relative !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.navLinks {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.navWrapper :global(.navbar__link) {
+  color: #000000 !important;
 }
 
-.navPartnerLogo {
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-}
-
-.navLink {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  color: #000000;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: opacity 0.3s;
-}
-
-.navLink:hover {
-  opacity: 0.7;
+.navWrapper :global(.navbar__partner-section) {
+  display: flex !important;
 }
 
 /* Main Contact Section */

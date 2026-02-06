@@ -1,10 +1,9 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import styles from './Contact.module.css';
 import contactHero from '../assets/contact/contact-hero.png';
-import vaadiLogo from '../assets/Images for Landing Pages/Vaadi Logo PNG 003.png';
-import capricornLogo from '../assets/about/capricorn-logo.png';
 
 const CONTACT_WHATSAPP = '971505793490';
 
@@ -53,17 +52,9 @@ const Contact = () => {
   return (
     <div className={styles.pageWrapper}>
       {/* Navigation */}
-      <nav className={styles.nav}>
-        <img src={vaadiLogo} alt="Vaadi Lake Mulshi" className={styles.navBrandLogo} />
-        <div className={styles.navLinks}>
-          <Link to="/" className={styles.navLink}>HOME</Link>
-          <Link to="/about" className={styles.navLink}>VAADI</Link>
-          <Link to="/lifestyle" className={styles.navLink}>LIFESTYLE</Link>
-          <Link to="/contact" className={styles.navLink}>BLOGS</Link>
-          <Link to="/contact" className={styles.navLink}>CONTACT</Link>
-        </div>
-        <img src={capricornLogo} alt="Capricorn Group" className={styles.navPartnerLogo} />
-      </nav>
+      <div className={styles.navWrapper}>
+        <Navbar />
+      </div>
       
       {/* Main Contact Content */}
       <main className={styles.contactPage}>
