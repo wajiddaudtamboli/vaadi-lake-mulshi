@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import About from './pages/About';
 import Lifestyle from './pages/Lifestyle';
 import Contact from './pages/Contact';
+import BookMeeting from './pages/BookMeeting';
 import './styles/global.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/lifestyle" element={<Lifestyle />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/book-meeting" element={<BookMeeting />} />
       </Routes>
     </BrowserRouter>
   );

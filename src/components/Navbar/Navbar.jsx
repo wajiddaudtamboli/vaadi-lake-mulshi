@@ -19,7 +19,7 @@ const Navbar = () => {
         <Link to="/" className="navbar__link">HOME</Link>
         <Link to="/about" className="navbar__link">VAADI</Link>
         <Link to="/lifestyle" className="navbar__link">LIFESTYLE</Link>
-        <a href="#" className="navbar__link">BLOGS</a>
+        <Link to="/contact" className="navbar__link">BLOGS</Link>
         <Link to="/contact" className="navbar__link">CONTACT</Link>
         <div className="navbar__partner-section">
           <img src={capricornLogo} alt="Capricorn" className="navbar__capricorn" />

@@ -68,6 +68,8 @@
 }
 
 .nav {
+  position: absolute;
+  left: 550px;
   display: flex;
   align-items: center;
   gap: 32px;
@@ -527,31 +529,43 @@
   
   .navHeader {
     flex-wrap: wrap;
-    padding: 16px;
+    padding: 14px 16px;
     gap: 12px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
   }
   
   .brandLogo {
-    width: 60px;
-    height: 72px;
+    display: none;
   }
   
   .partnerLogo {
-    width: 80px;
+    width: 70px;
     order: 2;
   }
   
   .nav {
-    order: 3;
+    position: static;
+    left: auto;
+    order: 1;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 8px;
+    gap: 12px 18px;
+    margin-top: 0;
   }
   
   .navLink {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-black);
+    padding: 6px 4px;
   }
   
   .welcomeSection {
@@ -666,25 +680,30 @@
   }
   
   .navHeader {
-    padding: 12px;
+    padding: 12px 10px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
   .brandLogo {
-    width: 50px;
-    height: 60px;
+    display: none;
   }
   
   .partnerLogo {
-    width: 70px;
+    width: 60px;
+    height: auto;
   }
   
   .nav {
-    gap: 8px;
+    gap: 10px 14px;
+    width: 100%;
   }
   
   .navLink {
-    font-size: 10px;
-    letter-spacing: 0.1px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 6px 3px;
   }
   
   .welcomeSection {
@@ -787,5 +806,145 @@
   .freshDescription {
     font-size: 13px;
     line-height: 20px;
+  }
+}
+
+/* Small phones (320px - 375px) */
+@media screen and (max-width: 375px) {
+  .navHeader {
+    padding: 10px 8px;
+  }
+  
+  .nav {
+    gap: 8px 12px;
+  }
+  
+  .navLink {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 5px 2px;
+  }
+  
+  .partnerLogo {
+    width: 50px;
+  }
+}
+
+/* Phone Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .navHeader {
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+  
+  .brandLogo {
+    display: none;
+  }
+  
+  .nav {
+    position: static;
+    width: 100%;
+    gap: 10px 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .navLink {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 4px 3px;
+  }
+  
+  .partnerLogo {
+    width: 60px;
+  }
+}
+
+/* Desktop mode on phone browsers (PWA/Desktop view) */
+@media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
+       screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+  .navHeader {
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    justify-content: center;
+  }
+  
+  .brandLogo {
+    display: none;
+  }
+  
+  .nav {
+    position: static;
+    gap: 14px 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navLink {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-black);
+    padding: 6px 4px;
+  }
+  
+  .partnerLogo {
+    width: 80px;
+    margin-left: 10px;
+  }
+}
+
+/* Touch device with wide viewport (desktop mode on mobile) */
+@media screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .navHeader {
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    justify-content: center;
+  }
+  
+  .brandLogo {
+    display: none;
+  }
+  
+  .nav {
+    position: static;
+    gap: 16px 26px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navLink {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-black);
+    padding: 6px 5px;
+  }
+  
+  .partnerLogo {
+    width: 90px;
+    margin-left: 12px;
   }
 }

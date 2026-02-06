@@ -32,6 +32,21 @@
   color: #FFFFFF;
 }
 
+/* Override Navbar for transparent background on Lifestyle page */
+.hero :global(.navbar) {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.hero :global(.navbar__link) {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero :global(.navbar__partner-section) {
+  display: flex !important;
+}
+
 @media (max-width: 1024px) {
   .hero {
     height: 700px;
@@ -42,10 +57,111 @@
   .hero {
     height: 560px;
   }
+  
+  .hero :global(.navbar) {
+    background: transparent !important;
+    box-shadow: none !important;
+    position: absolute !important;
+  }
+  
+  .hero :global(.navbar__link) {
+    color: #FFFFFF !important;
+    font-weight: 600;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
 }
 
 @media (max-width: 480px) {
   .hero {
     height: 460px;
+  }
+  
+  .hero :global(.navbar) {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .hero :global(.navbar__link) {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 375px) {
+  .hero :global(.navbar) {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .hero :global(.navbar__link) {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Phone Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero :global(.navbar) {
+    background: transparent !important;
+    box-shadow: none !important;
+    position: absolute !important;
+  }
+  
+  .hero :global(.navbar__link) {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Phone Desktop Mode */
+@media screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+  .hero :global(.navbar) {
+    background: transparent !important;
+    box-shadow: none !important;
+    justify-content: flex-end !important;
+    padding: 20px 30px !important;
+  }
+  
+  .hero :global(.navbar__nav) {
+    justify-content: flex-end !important;
+    width: auto !important;
+    gap: 24px !important;
+  }
+  
+  .hero :global(.navbar__link) {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero :global(.navbar__partner-section) {
+    display: flex !important;
+    margin-left: 20px !important;
+  }
+}
+
+/* Touch device with wide viewport (desktop mode on mobile) */
+@media screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .hero :global(.navbar) {
+    background: transparent !important;
+    box-shadow: none !important;
+    justify-content: flex-end !important;
+    padding: 20px 40px !important;
+  }
+  
+  .hero :global(.navbar__nav) {
+    justify-content: flex-end !important;
+    width: auto !important;
+    gap: 28px !important;
+  }
+  
+  .hero :global(.navbar__link) {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero :global(.navbar__partner-section) {
+    display: flex !important;
+    margin-left: 24px !important;
   }
 }

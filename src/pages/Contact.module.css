@@ -35,7 +35,8 @@
   align-items: center;
   gap: 32px;
   position: absolute;
-  left: 750px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navPartnerLogo {
@@ -308,6 +309,8 @@
   }
   
   .navLinks {
+    position: static;
+    transform: none;
     gap: 20px;
   }
   
@@ -328,6 +331,8 @@
   }
   
   .navLinks {
+    position: static;
+    transform: none;
     gap: 16px;
   }
   
@@ -370,13 +375,13 @@
 @media (max-width: 768px) {
   .nav {
     flex-wrap: wrap;
-    padding: 12px 16px;
+    padding: 14px 16px;
     gap: 12px;
+    justify-content: center;
   }
   
   .navBrandLogo {
-    width: 50px;
-    height: 60px;
+    display: none;
   }
   
   .navPartnerLogo {
@@ -385,15 +390,20 @@
   }
   
   .navLinks {
-    order: 3;
+    position: static;
+    transform: none;
+    order: 1;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 12px 18px;
   }
   
   .navLink {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 4px;
   }
   
   .contactPage {
@@ -438,12 +448,11 @@
 /* Mobile Portrait */
 @media (max-width: 480px) {
   .nav {
-    padding: 10px 12px;
+    padding: 12px 10px;
   }
   
   .navBrandLogo {
-    width: 45px;
-    height: 54px;
+    display: none;
   }
   
   .navPartnerLogo {
@@ -451,11 +460,15 @@
   }
   
   .navLinks {
-    gap: 8px;
+    gap: 10px 14px;
+    width: 100%;
   }
   
   .navLink {
-    font-size: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 6px 3px;
   }
   
   .contactPage {
@@ -509,3 +522,199 @@
     line-height: 34px;
   }
 }
+
+/* Small phones (320px - 375px) */
+@media screen and (max-width: 375px) {
+  .nav {
+    padding: 10px 8px;
+  }
+  
+  .navLinks {
+    gap: 8px 12px;
+  }
+  
+  .navLink {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 5px 2px;
+  }
+  
+  .navPartnerLogo {
+    width: 50px;
+  }
+}
+
+/* Phone Landscape Mode */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .nav {
+    padding: 10px 16px;
+    justify-content: center;
+  }
+  
+  .navBrandLogo {
+    display: none;
+  }
+  
+  .navLinks {
+    position: static;
+    transform: none;
+    width: 100%;
+    gap: 10px 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .navLink {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 4px 3px;
+  }
+  
+  .navPartnerLogo {
+    width: 60px;
+  }
+}
+
+/* Desktop mode on phone browsers (PWA/Desktop view) */
+@media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
+       screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+  .nav {
+    padding: 16px 24px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .navBrandLogo {
+    display: block;
+    width: 50px;
+    height: 60px;
+  }
+  
+  .navLinks {
+    position: absolute;
+    left: 500px;
+    transform: none;
+    gap: 14px 24px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: auto;
+    align-items: center;
+  }
+  
+  .navLink {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 4px;
+  }
+  
+  .navPartnerLogo {
+    position: absolute;
+    right: 24px;
+    width: 80px;
+    margin-left: 0;
+  }
+  
+  .contactPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 120px 30px 60px;
+  }
+  
+  .infoColumn {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+  }
+  
+  .formColumn {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+  }
+  
+  .title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  
+  .infoCard {
+    padding: 24px;
+  }
+}
+
+/* Touch device with wide viewport (desktop mode on mobile) */
+@media screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .nav {
+    padding: 18px 28px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .navBrandLogo {
+    display: block;
+    width: 55px;
+    height: 66px;
+  }
+  
+  .navLinks {
+    position: absolute;
+    left: 500px;
+    transform: none;
+    gap: 16px 28px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: auto;
+    align-items: center;
+  }
+  
+  .navLink {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 5px;
+  }
+  
+  .navPartnerLogo {
+    position: absolute;
+    right: 28px;
+    width: 90px;
+    margin-left: 0;
+  }
+  
+  .contactPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 130px 40px 70px;
+  }
+  
+  .infoColumn {
+    flex: 1;
+    min-width: 300px;
+    max-width: 480px;
+  }
+  
+  .formColumn {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+  }
+  
+  .title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  
+  .infoCard {
+    padding: 28px;
+  }
+}
+

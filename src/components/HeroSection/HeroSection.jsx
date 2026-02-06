@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 import heroImage from '../../assets/Images for Landing Pages/Hero.png';
 
@@ -21,7 +22,7 @@ const HeroSection = () => {
         <p className="hero__description">
           Immerse yourself in the harmonious blend of serene lakes, lush greenery, and the unspoiled beauty of Vaadi Lake Mulshi, where nature's melody rejuvenates your soul.
         </p>
-        <a href="#contact" className="hero__cta">BOOK NOW</a>
+        <Link to="/book-meeting" className="hero__cta">BOOK NOW</Link>
       </div>
 
       {/* Floating Contact Buttons */}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import styles from './Contact.module.css';
@@ -6,10 +6,48 @@ import contactHero from '../assets/contact/contact-hero.png';
 import vaadiLogo from '../assets/Images for Landing Pages/Vaadi Logo PNG 003.png';
 import capricornLogo from '../assets/about/capricorn-logo.png';
 
+const CONTACT_WHATSAPP = '971505793490';
+
+function buildContactInquiryMessage(data) {
+  const lines = [
+    'Dear Vaadi / Capricorn Group,',
+    '',
+    'I would like to get in touch. Please find my details below:',
+    '',
+    '--- CONTACT INQUIRY ---',
+    '',
+    `Name:           ${(data.name || '').trim() || '—'}`,
+    `Email:          ${(data.email || '').trim() || '—'}`,
+    `Phone Number:   ${(data.phone || '').trim() || '—'}`,
+    `Availability:   ${(data.availability || '').trim() || '—'}`,
+    '',
+    'Message:',
+    (data.message || '').trim() || '—',
+    '',
+    '---',
+    '',
+    'Thank you.',
+    'Best regards,',
+    (data.name || '').trim() || 'Inquirer',
+  ];
+  return lines.join('\n');
+}
+
 const Contact = () => {
+  const formRef = useRef(null);
+
+  const openContactWhatsApp = () => {
+    const form = formRef.current;
+    if (!form) return;
+    const data = Object.fromEntries(new FormData(form));
+    const message = buildContactInquiryMessage(data);
+    const url = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(message)}`;
+    window.location.href = url;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    openContactWhatsApp();
   };
 
   return (
@@ -21,7 +59,7 @@ const Contact = () => {
           <Link to="/" className={styles.navLink}>HOME</Link>
           <Link to="/about" className={styles.navLink}>VAADI</Link>
           <Link to="/lifestyle" className={styles.navLink}>LIFESTYLE</Link>
-          <a href="#" className={styles.navLink}>BLOGS</a>
+          <Link to="/contact" className={styles.navLink}>BLOGS</Link>
           <Link to="/contact" className={styles.navLink}>CONTACT</Link>
         </div>
         <img src={capricornLogo} alt="Capricorn Group" className={styles.navPartnerLogo} />
@@ -73,7 +111,7 @@ const Contact = () => {
 
         {/* Right Column - Form */}
         <div className={styles.formColumn}>
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <form ref={formRef} className={styles.form} onSubmit={handleSubmit} noValidate>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="contact-name" className={styles.formLabel}>NAME*</label>
@@ -134,7 +172,13 @@ const Contact = () => {
               />
             </div>
 
-            <button type="submit" className={styles.submitButton}>SUBMIT</button>
+            <button
+              type="button"
+              className={styles.submitButton}
+              onClick={openContactWhatsApp}
+            >
+              SUBMIT
+            </button>
           </form>
         </div>
       </main>

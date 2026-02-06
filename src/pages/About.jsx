@@ -28,7 +28,7 @@ const About = () => {
               <Link to="/" className={styles.navLink}>HOME</Link>
               <Link to="/about" className={styles.navLink}>VAADI</Link>
               <Link to="/lifestyle" className={styles.navLink}>LIFESTYLE</Link>
-              <a href="#" className={styles.navLink}>BLOGS</a>
+              <Link to="/contact" className={styles.navLink}>BLOGS</Link>
               <Link to="/contact" className={styles.navLink}>CONTACT</Link>
             </nav>
             <img src={capricornLogo} alt="Capricorn Group" className={styles.partnerLogo} />
