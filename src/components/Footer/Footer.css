@@ -482,3 +482,208 @@
     padding: 12px 15px;
   }
 }
+
+/* Desktop mode on phone browsers (PWA/Desktop view) */
+@media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
+       screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+  .footer {
+    padding: 35px 30px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 30px;
+    text-align: left;
+  }
+  
+  .footer-brand {
+    min-width: 150px;
+    align-items: flex-start;
+  }
+  
+  .footer-logos {
+    gap: 12px;
+  }
+  
+  .footer-vaadi-icon {
+    width: 50px;
+  }
+  
+  .footer-qr {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-project-text {
+    font-size: 9px;
+  }
+  
+  .footer-project-text strong {
+    font-size: 10px;
+  }
+  
+  .footer-column {
+    min-width: 120px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .footer-column-title {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  
+  .footer-column p,
+  .footer-column a {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  
+  .footer-column-title--mt {
+    margin-top: 16px;
+  }
+  
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin: 0 -30px;
+  }
+  
+  .footer-bottom-left {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .footer-capricorn-icon-img {
+    height: 28px;
+  }
+  
+  .footer-links {
+    gap: 12px;
+  }
+  
+  .footer-links a,
+  .footer-copyright,
+  .footer-developed {
+    font-size: 9px;
+  }
+  
+  .footer-social {
+    gap: 12px;
+  }
+  
+  .footer-social svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Touch device with wide viewport (desktop mode on mobile) */
+@media screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .footer {
+    padding: 40px 35px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    padding-bottom: 35px;
+    text-align: left;
+  }
+  
+  .footer-brand {
+    min-width: 160px;
+    align-items: flex-start;
+  }
+  
+  .footer-logos {
+    gap: 14px;
+  }
+  
+  .footer-vaadi-icon {
+    width: 55px;
+  }
+  
+  .footer-qr {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .footer-project-text {
+    font-size: 10px;
+  }
+  
+  .footer-project-text strong {
+    font-size: 11px;
+  }
+  
+  .footer-column {
+    min-width: 130px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .footer-column-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  
+  .footer-column p,
+  .footer-column a {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  
+  .footer-column-title--mt {
+    margin-top: 18px;
+  }
+  
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 18px 35px;
+    margin: 0 -35px;
+  }
+  
+  .footer-bottom-left {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .footer-capricorn-icon-img {
+    height: 32px;
+  }
+  
+  .footer-links {
+    gap: 14px;
+  }
+  
+  .footer-links a,
+  .footer-copyright,
+  .footer-developed {
+    font-size: 10px;
+  }
+  
+  .footer-social {
+    gap: 14px;
+  }
+  
+  .footer-social svg {
+    width: 18px;
+    height: 18px;
+  }
+}
