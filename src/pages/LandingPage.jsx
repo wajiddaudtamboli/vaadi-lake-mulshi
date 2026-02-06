@@ -13,10 +13,11 @@ import Reviews from '../components/Reviews';
 import GoogleReviews from '../components/GoogleReviews';
 import ReimagineLiving from '../components/ReimagineLiving';
 import Footer from '../components/Footer';
+import styles from './LandingPage.module.css';
 
 const LandingPage = () => {
   return (
-    <>
+    <div className={styles.landingPage}>
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -31,7 +32,7 @@ const LandingPage = () => {
       <GoogleReviews />
       <ReimagineLiving />
       <Footer />
-    </>
+    </div>
   );
 };
 
