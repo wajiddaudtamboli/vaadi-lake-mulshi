@@ -84,9 +84,8 @@ const BookMeeting = () => {
 
           <div className={styles.headlineWrap}>
             <h1 className={styles.headline}>
-              Schedule an
-              <br />
-              meeting with us.
+              <span>Schedule an</span>
+              <span>meeting with us.</span>
             </h1>
           </div>
 
