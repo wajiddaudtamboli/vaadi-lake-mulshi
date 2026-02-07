@@ -29,7 +29,7 @@ const LandingPage = () => {
       <Founder />
       <Gallery />
       <Reviews />
-      <GoogleReviews />
+      {/* <GoogleReviews /> */}
       <ReimagineLiving />
       <Footer />
     </div>

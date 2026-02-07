@@ -119,14 +119,26 @@
   .hero :global(.navbar) {
     background: transparent !important;
     box-shadow: none !important;
-    justify-content: flex-end !important;
-    padding: 20px 30px !important;
+    position: absolute !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+  }
+  
+  .hero :global(.navbar__logo) {
+    display: flex !important;
+  }
+  
+  .hero :global(.navbar__logo-img) {
+    width: 70px !important;
+    height: auto !important;
   }
   
   .hero :global(.navbar__nav) {
     justify-content: flex-end !important;
     width: auto !important;
-    gap: 24px !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
   }
   
   .hero :global(.navbar__link) {
@@ -136,7 +148,11 @@
   
   .hero :global(.navbar__partner-section) {
     display: flex !important;
-    margin-left: 20px !important;
+    margin-left: 14px !important;
+  }
+
+  .hero :global(.navbar__capricorn) {
+    height: 22px !important;
   }
 }
 
@@ -145,14 +161,26 @@
   .hero :global(.navbar) {
     background: transparent !important;
     box-shadow: none !important;
-    justify-content: flex-end !important;
-    padding: 20px 40px !important;
+    position: absolute !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+  }
+  
+  .hero :global(.navbar__logo) {
+    display: flex !important;
+  }
+  
+  .hero :global(.navbar__logo-img) {
+    width: 70px !important;
+    height: auto !important;
   }
   
   .hero :global(.navbar__nav) {
     justify-content: flex-end !important;
     width: auto !important;
-    gap: 28px !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
   }
   
   .hero :global(.navbar__link) {
@@ -162,6 +190,10 @@
   
   .hero :global(.navbar__partner-section) {
     display: flex !important;
-    margin-left: 24px !important;
+    margin-left: 14px !important;
+  }
+
+  .hero :global(.navbar__capricorn) {
+    height: 22px !important;
   }
 }

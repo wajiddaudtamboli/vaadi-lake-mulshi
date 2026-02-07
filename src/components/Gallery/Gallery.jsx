@@ -28,7 +28,7 @@ const Gallery = () => {
               <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
             </div>
           </div>
-          <div className="gallery__item gallery__item--medium">
+          <div className="gallery__item gallery__item--short">
             <img src={gallery5} alt="Gallery" />
             <div className="gallery__overlay">
               <p className="gallery__overlay-title">Effective product marketing</p>

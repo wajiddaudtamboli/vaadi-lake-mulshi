@@ -2,7 +2,7 @@
   display: flex;
   min-height: 480px;
   background-color: var(--color-white);
-  padding: 30px 0 0 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -12,13 +12,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 30px 50px 20px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 30px 0 32px;
 }
 
 .welcome__badge {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 13px;
+  font-size: 17px;
   letter-spacing: 0.15em;
   color: var(--color-text-body);
   margin-bottom: 16px;
@@ -26,10 +28,11 @@
 }
 
 .welcome__title {
-  font-family: var(--font-secondary);
-  font-weight: 900;
-  font-size: 42px;
+  font-family: var(--font-optima);
+  font-weight: 700;
+  font-size: 52px;
   line-height: 1.15;
+  letter-spacing: 0.01em;
   color: #000;
   margin-bottom: 22px;
   text-shadow: 1px 1px 0 #000;
@@ -38,7 +41,7 @@
 .welcome__description {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--color-text-body);
   margin-bottom: 8px;
@@ -47,14 +50,14 @@
 
 .welcome__cta {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 32px;
   background-color: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-primary);
   font-weight: var(--fw-medium);
   font-size: 12px;
   letter-spacing: 0.12em;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
   margin-top: 24px;
   align-self: flex-start;
@@ -118,8 +121,9 @@
 /* Navigation Buttons */
 .welcome__nav {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 0;
+  right: auto;
   display: flex;
   gap: 8px;
 }
@@ -127,12 +131,12 @@
 .welcome__nav-btn {
   width: 36px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--color-primary);
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  color: var(--color-text-dark);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,32 +144,32 @@
 }
 
 .welcome__nav-btn:hover {
-  background: rgba(255, 255, 255, 1);
+  background: var(--color-primary-dark);
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
   .welcome {
-    padding: 25px 25px 25px 0;
+    padding: 0;
   }
   
   .welcome__content {
-    padding: 50px 30px 50px 50px;
+    padding: 0 30px 0 50px;
   }
   
   .welcome__title {
-    font-size: 36px;
+    font-size: 44px;
   }
 }
 
 @media (max-width: 1024px) {
   .welcome {
-    padding: 20px 20px 20px 0;
+    padding: 0;
   }
   
   .welcome__content {
     width: 45%;
-    padding: 40px 25px 40px 40px;
+    padding: 0 25px 0 40px;
   }
   
   .welcome__image {
@@ -173,11 +177,11 @@
   }
   
   .welcome__title {
-    font-size: 32px;
+    font-size: 38px;
   }
   
   .welcome__description {
-    font-size: 12px;
+    font-size: 15px;
     max-width: 100%;
   }
   
@@ -228,8 +232,9 @@
   }
   
   .welcome__nav {
-    bottom: 15px;
-    right: 15px;
+    bottom: 0;
+    left: 0;
+    right: auto;
   }
   
   .welcome__nav-btn {
@@ -274,7 +279,7 @@
 @media screen and (max-height: 500px) and (orientation: landscape) {
   .welcome {
     flex-direction: row;
-    padding: 15px 15px 15px 0;
+    padding: 0;
     min-height: 100vh;
   }
   

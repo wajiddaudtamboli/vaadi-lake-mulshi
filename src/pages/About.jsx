@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import styles from './About.module.css';
-import heroImage from '../assets/about/about-hero.png';
+
 import sliderImage from '../assets/about/about-slider.png';
 import chevronLeft from '../assets/about/chevron-left.svg';
 import chevronRight from '../assets/about/chevron-right.svg';
@@ -18,7 +18,15 @@ const About = () => {
       <div className={styles.aboutPage}>
         {/* Hero Section */}
         <section className={styles.heroSection}>
-          <img src={heroImage} alt="Vaadi Lake Mulshi" className={styles.heroImage} />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={styles.heroImage}
+          >
+            <source src="https://vaadi.in/hero-about1.mp4" type="video/mp4" />
+          </video>
           <div className={styles.heroOverlay} aria-hidden="true" />
           <Navbar />
         </section>
@@ -80,7 +88,7 @@ const About = () => {
           <iframe
             className={styles.mapIframe}
             title="Vaadi Estate Location"
-            src="https://maps.google.com/maps?q=Vaadi%20Estate%2C%20Lonavala%20Road%2C%20Taluka%2C%20Village%20Shiravli%2C%20Mulshi%2C%20Pune%2C%20Maharashtra%20412108%2C%20India&z=19&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171094.0518156239!2d73.2958690276414!3d18.633444519632093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be81db9477d301f%3A0xbe733eea59b0c335!2sVaadi!5e0!3m2!1sen!2sin!4v1736617116320!5m2!1sen!2sin"
             loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
           />

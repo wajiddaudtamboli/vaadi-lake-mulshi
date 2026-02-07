@@ -837,6 +837,47 @@
 /* Desktop mode on phone browsers (PWA/Desktop view) */
 @media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
        screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+  .heroSection :global(.navbar) {
+    position: absolute !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+  }
+  
+  .heroSection :global(.navbar__logo) {
+    display: flex !important;
+  }
+  
+  .heroSection :global(.navbar__logo-img) {
+    width: 70px !important;
+    height: auto !important;
+  }
+  
+  .heroSection :global(.navbar__nav) {
+    width: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    gap: 20px !important;
+  }
+  
+  .heroSection :global(.navbar__link) {
+    font-size: 10px !important;
+    font-weight: var(--fw-semibold) !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+  
+  .heroSection :global(.navbar__capricorn) {
+    height: 22px !important;
+  }
+  
+  .heroSection :global(.navbar__partner-section) {
+    margin-left: 14px !important;
+  }
+
   .navHeader {
     padding: 14px 20px;
     background: rgba(255, 255, 255, 0.98);
@@ -877,6 +918,47 @@
 
 /* Touch device with wide viewport (desktop mode on mobile) */
 @media screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .heroSection :global(.navbar) {
+    position: absolute !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+  }
+  
+  .heroSection :global(.navbar__logo) {
+    display: flex !important;
+  }
+  
+  .heroSection :global(.navbar__logo-img) {
+    width: 70px !important;
+    height: auto !important;
+  }
+  
+  .heroSection :global(.navbar__nav) {
+    width: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    gap: 20px !important;
+  }
+  
+  .heroSection :global(.navbar__link) {
+    font-size: 10px !important;
+    font-weight: var(--fw-semibold) !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+  
+  .heroSection :global(.navbar__capricorn) {
+    height: 22px !important;
+  }
+  
+  .heroSection :global(.navbar__partner-section) {
+    margin-left: 14px !important;
+  }
+
   .navHeader {
     padding: 16px 24px;
     background: rgba(255, 255, 255, 0.98);

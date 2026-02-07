@@ -1,14 +1,23 @@
 import React from 'react';
 import './AboutSection.css';
 import fullLogo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 002.png';
-import aboutImage from '../../assets/Images for Landing Pages/about.png';
+const aboutVideoUrl = 'https://vaadi.in/actual-site-view.mp4';
 
 const AboutSection = () => {
   return (
     <section className="about" id="vaadi">
       {/* Full-width Background - Image */}
       <div className="about__background">
-        <img src={aboutImage} alt="About Vaadi" className="about__background-image" />
+        <video
+          className="about__background-image"
+          src={aboutVideoUrl}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="About Vaadi"
+        />
       </div>
 
       {/* Floating White Card - Positioned Right */}

@@ -7,8 +7,15 @@ const VillaShowcase = () => {
     <section className="villa-showcase">
       {/* Left Side - Image */}
       <div className="villa-showcase__image">
-        
         <img src={estateImgB} alt="Vaadi Estate B" className="villa-showcase__image-b" />
+        <div className="villa-showcase__nav" aria-hidden="true">
+          <button className="villa-showcase__nav-btn" type="button" aria-label="Previous">
+            &lt;
+          </button>
+          <button className="villa-showcase__nav-btn" type="button" aria-label="Next">
+            &gt;
+          </button>
+        </div>
       </div>
 
       {/* Right Side - Content */}

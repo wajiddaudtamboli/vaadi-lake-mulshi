@@ -33,8 +33,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   padding: 60px 80px;
   background-color: #014d67;
 }
@@ -42,18 +42,18 @@
 .founder__badge {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
 }
 
 .founder__title {
-  font-family: var(--font-secondary);
-  font-weight: var(--fw-semibold);
-  font-style: italic;
-  font-size: 65px;
-  line-height: 1.1;
+  font-family: var(--font-optima);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 0.02em;
   color: var(--color-white);
   margin-bottom: 32px;
 }
@@ -61,7 +61,7 @@
 .founder__description {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.85);
   max-width: 480px;
@@ -74,12 +74,13 @@
   }
   
   .founder__title {
-    font-size: 55px;
+    font-size: 50px;
+    line-height: 60px;
   }
   
   .founder__description {
     max-width: 420px;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -94,11 +95,12 @@
   }
   
   .founder__title {
-    font-size: 48px;
+    font-size: 44px;
+    line-height: 54px;
   }
   
   .founder__description {
-    font-size: 14px;
+    font-size: 15px;
     max-width: 100%;
   }
 }
@@ -119,11 +121,12 @@
   }
   
   .founder__title {
-    font-size: 42px;
+    font-size: 40px;
+    line-height: 48px;
   }
   
   .founder__description {
-    font-size: 14px;
+    font-size: 15px;
     max-width: 100%;
   }
 }
@@ -134,11 +137,12 @@
   }
   
   .founder__title {
-    font-size: 36px;
+    font-size: 34px;
+    line-height: 42px;
   }
   
   .founder__description {
-    font-size: 13px;
+    font-size: 14px;
   }
   
   .founder__image {
@@ -163,12 +167,13 @@
   }
   
   .founder__title {
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 38px;
     margin-bottom: 14px;
   }
   
   .founder__description {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.6;
   }
 }
@@ -180,10 +185,11 @@
   }
   
   .founder__title {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 36px;
   }
   
   .founder__description {
-    font-size: 12px;
+    font-size: 13px;
   }
 }

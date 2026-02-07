@@ -41,7 +41,7 @@
   gap: 60px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 140px 60px 80px;
+  padding: 175px 60px 80px;
 }
 
 /* Left Column - Info */
@@ -201,21 +201,21 @@
 .submitButton {
   align-self: flex-end;
   padding: 12px 32px;
-  background: #004d66;
+  background: var(--color-primary);
   color: #ffffff;
-  border: 1px solid #004d66;
-  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
   font-family: "Poppins", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.12em;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
 
 .submitButton:hover {
-  background: #003d52;
+  background: var(--color-primary-dark);
   transform: translateY(-2px);
 }
 
@@ -552,6 +552,53 @@
 /* Desktop mode on phone browsers (PWA/Desktop view) */
 @media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
        screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse) {
+  .navWrapper {
+    position: absolute;
+    background: transparent;
+  }
+
+  .navWrapper :global(.navbar) {
+    position: absolute !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+  }
+
+  .navWrapper :global(.navbar__logo) {
+    display: flex !important;
+  }
+
+  .navWrapper :global(.navbar__logo-img) {
+    width: 70px !important;
+    height: auto !important;
+  }
+
+  .navWrapper :global(.navbar__nav) {
+    width: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    gap: 20px !important;
+  }
+
+  .navWrapper :global(.navbar__link) {
+    font-size: 10px !important;
+    font-weight: var(--fw-semibold) !important;
+    color: var(--color-text-dark) !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .navWrapper :global(.navbar__capricorn) {
+    height: 22px !important;
+  }
+
+  .navWrapper :global(.navbar__partner-section) {
+    margin-left: 14px !important;
+  }
+
   .nav {
     padding: 12px 24px;
     justify-content: flex-start;
@@ -613,13 +660,12 @@
   .title {
     font-size: 32px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   
   .infoCard {
-    padding: 20px;
-    margin-top: -60px;
-    padding-top: 80px;
+    padding: 28px 22px 22px;
+    margin-top: 0;
   }
   
   .heroSection {
@@ -630,6 +676,53 @@
 
 /* Touch device with wide viewport (desktop mode on mobile) */
 @media screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .navWrapper {
+    position: absolute;
+    background: transparent;
+  }
+
+  .navWrapper :global(.navbar) {
+    position: absolute !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    flex-wrap: nowrap !important;
+    padding: 16px 24px !important;
+  }
+
+  .navWrapper :global(.navbar__logo) {
+    display: flex !important;
+  }
+
+  .navWrapper :global(.navbar__logo-img) {
+    width: 70px !important;
+    height: auto !important;
+  }
+
+  .navWrapper :global(.navbar__nav) {
+    width: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    gap: 20px !important;
+  }
+
+  .navWrapper :global(.navbar__link) {
+    font-size: 10px !important;
+    font-weight: var(--fw-semibold) !important;
+    color: var(--color-text-dark) !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .navWrapper :global(.navbar__capricorn) {
+    height: 22px !important;
+  }
+
+  .navWrapper :global(.navbar__partner-section) {
+    margin-left: 14px !important;
+  }
+
   .nav {
     padding: 12px 28px;
     justify-content: flex-start;
@@ -691,13 +784,12 @@
   .title {
     font-size: 34px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   
   .infoCard {
-    padding: 22px;
-    margin-top: -60px;
-    padding-top: 80px;
+    padding: 30px 24px 24px;
+    margin-top: 0;
   }
   
   .heroSection {

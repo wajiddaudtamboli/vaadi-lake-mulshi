@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 003.png';
+import logoDefault from '../../assets/Images for Landing Pages/Vaadi Logo PNG 003.png';
+import logoAlt from '../../assets/Images for Landing Pages/Vaadi Logo PNG 002.png';
 import capricornLogo from '../../assets/Images for Landing Pages/Frame 33380.png';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const useAltLogo =
+    location.pathname === '/contact' ||
+    location.pathname === '/blogs' ||
+    location.pathname.startsWith('/blogs/');
 
   return (
     <header className="navbar">
       {/* Left - Logo */}
       <div className="navbar__logo">
-        <img src={logo} alt="Vaadi Lake Mulshi" className="navbar__logo-img" />
+        <img
+          src={useAltLogo ? logoAlt : logoDefault}
+          alt="Vaadi Lake Mulshi"
+          className="navbar__logo-img"
+        />
       </div>
 
       {/* Right - Navigation Links + Partner Section */}

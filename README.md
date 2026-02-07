@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="src/assets/Vaadi LOGO PNG (1)/Vaadi LOGO PNG.png" alt="Vaadi Logo" width="120"/>
-</p>
-
 <h1 align="center">Vaadi</h1>
 <p align="center"><em>Where Luxury Meets Nature</em></p>
 

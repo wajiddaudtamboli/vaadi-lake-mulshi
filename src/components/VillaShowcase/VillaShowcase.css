@@ -8,7 +8,7 @@
 
 /* Left Side - Image */
 .villa-showcase__image {
-  width: 55%;
+  width: 60%;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -36,17 +36,47 @@
 
 /* Right Side - Content */
 .villa-showcase__content {
-  width: 45%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 70px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 60px 0 70px;
+}
+
+/* Navigation Buttons */
+.villa-showcase__nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.villa-showcase__nav-btn {
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.villa-showcase__nav-btn:hover {
+  background: var(--color-primary-dark);
 }
 
 .villa-showcase__badge {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.3em;
   color: var(--color-text-body);
   margin-bottom: 14px;
@@ -54,10 +84,11 @@
 }
 
 .villa-showcase__title {
-  font-family: var(--font-secondary);
-  font-weight: 900;
-  font-size: 42px;
+  font-family: var(--font-optima);
+  font-weight: 700;
+  font-size: 46px;
   line-height: 1.15;
+  letter-spacing: 0.01em;
   color: #000;
   margin-bottom: 20px;
   text-shadow: 1px 1px 0 #000;
@@ -66,7 +97,7 @@
 .villa-showcase__description {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
   color: var(--color-text-body);
   max-width: 360px;
@@ -75,7 +106,7 @@
 /* Responsive */
 @media (max-width: 1200px) {
   .villa-showcase__content {
-    padding: 50px 50px;
+    padding: 0 45px 0 55px;
   }
   
   .villa-showcase__title {
@@ -85,12 +116,12 @@
 
 @media (max-width: 1024px) {
   .villa-showcase__image {
-    width: 50%;
+    width: 55%;
   }
   
   .villa-showcase__content {
-    width: 50%;
-    padding: 40px;
+    width: 45%;
+    padding: 0 36px 0 44px;
   }
   
   .villa-showcase__title {
@@ -100,6 +131,17 @@
   .villa-showcase__description {
     font-size: 12px;
     max-width: 100%;
+  }
+
+  .villa-showcase__nav {
+    bottom: 0;
+    right: 0;
+  }
+
+  .villa-showcase__nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
   }
 }
 
@@ -130,6 +172,17 @@
   .villa-showcase__description {
     font-size: 12px;
   }
+
+  .villa-showcase__nav {
+    bottom: 0;
+    right: 0;
+  }
+
+  .villa-showcase__nav-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -148,6 +201,11 @@
   .villa-showcase__image {
     height: 35vh;
   }
+
+  .villa-showcase__nav {
+    bottom: 0;
+    right: 0;
+  }
 }
 
 /* Phone Landscape Mode */
@@ -158,12 +216,12 @@
   }
   
   .villa-showcase__image {
-    width: 55%;
+    width: 60%;
     height: auto;
   }
   
   .villa-showcase__content {
-    width: 45%;
+    width: 40%;
     padding: 20px 25px;
   }
   
@@ -180,6 +238,17 @@
   .villa-showcase__description {
     font-size: 10px;
     line-height: 1.5;
+  }
+
+  .villa-showcase__nav {
+    bottom: 0;
+    right: 0;
+  }
+
+  .villa-showcase__nav-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
   }
 }
 

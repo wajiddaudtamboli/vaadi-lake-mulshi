@@ -9,7 +9,7 @@ const CONTACT_WHATSAPP = '971505793490';
 
 function buildContactInquiryMessage(data) {
   const lines = [
-    'Dear Vaadi / Capricorn Group,',
+    'Dear Vaadi Group,',
     '',
     'I would like to get in touch. Please find my details below:',
     '',

@@ -238,16 +238,17 @@
 
 .submitBtn {
   width: 100%;
-  padding: 10px 18px;
+  padding: 12px 24px;
   font-family: 'Gilroy-Medium', 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center;
   color: #FFFFFF;
-  background: #004D66;
+  background: var(--color-primary);
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  letter-spacing: 0.12em;
   cursor: pointer;
   position: relative;
   z-index: 10;

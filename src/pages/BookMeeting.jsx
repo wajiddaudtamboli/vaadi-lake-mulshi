@@ -12,7 +12,7 @@ const BOOK_MEETING_WHATSAPP = '971505793490';
 function buildInquiryMessage(form) {
   const meetingTypeLabel = (form.meetingType || '—') === 'online' ? 'Online' : (form.meetingType || '—') === 'offline' ? 'Offline' : (form.meetingType || '—');
   const lines = [
-    'Dear Vaadi / Capricorn Group,',
+    'Dear Vaadi Group,',
     '',
     'I would like to schedule a meeting. Please find my details below:',
     '',
