@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './WelcomeSection.css';
-import welcomeImg from '../../assets/Images for Landing Pages/A001.svg';
+import welcomeImg1 from '../../assets/Images for Landing Pages/A001.svg';
+import welcomeImg2 from '../../assets/Images for Landing Pages/Welcome.jpg';
+
+const images = [welcomeImg1, welcomeImg2];
+const AUTO_SLIDE_INTERVAL = 5000; // 5 seconds
 
 const WelcomeSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const timerRef = useRef(null);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const goNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const goPrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  // Auto-slide (uses functional update so interval always has latest state)
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, AUTO_SLIDE_INTERVAL);
+    return () => clearInterval(timerRef.current);
+  }, []);
+
+  // Pause auto-slide on hover
+  const handleMouseEnter = () => clearInterval(timerRef.current);
+  const handleMouseLeave = () => {
+    timerRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, AUTO_SLIDE_INTERVAL);
+  };
+
   return (
     <section className="welcome">
       {/* Left Side - Content */}
@@ -15,13 +50,38 @@ const WelcomeSection = () => {
         <a href="#contact" className="welcome__cta">ENQUIRE NOW</a>
       </div>
 
-      {/* Right Side - Image with Labels */}
-      <div className="welcome__image">
-        <img src={welcomeImg} alt="Vaadi Lake Mulshi Aerial View" />
-       
+      {/* Right Side - Image Slideshow */}
+      <div
+        className="welcome__image"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="welcome__slider">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Vaadi Lake Mulshi View ${index + 1}`}
+              className={`welcome__slide ${index === currentIndex ? 'welcome__slide--active' : ''}`}
+            />
+          ))}
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="welcome__indicators">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`welcome__indicator ${index === currentIndex ? 'welcome__indicator--active' : ''}`}
+              onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
         <div className="welcome__nav">
-          <button className="welcome__nav-btn">&lt;</button>
-          <button className="welcome__nav-btn">&gt;</button>
+          <button className="welcome__nav-btn" onClick={goPrev} aria-label="Previous slide">&lt;</button>
+          <button className="welcome__nav-btn" onClick={goNext} aria-label="Next slide">&gt;</button>
         </div>
       </div>
     </section>
