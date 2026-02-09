@@ -4,6 +4,7 @@
   background-color: var(--color-white);
   padding: 0;
   margin: 0;
+  margin-top: 112px;
 }
 
 /* Left Side - Content */
@@ -15,51 +16,52 @@
   align-items: flex-start;
   text-align: left;
   padding: 0 30px 0 32px;
+  margin: 0;
 }
 
 .welcome__badge {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 17px;
+  font-size: 15px;
   letter-spacing: 0.15em;
   color: var(--color-text-body);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-transform: none;
 }
 
 .welcome__title {
   font-family: var(--font-optima);
   font-weight: 700;
-  font-size: 52px;
+  font-size: 48px;
   line-height: 1.15;
   letter-spacing: 0.01em;
   color: #000;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   text-shadow: 1px 1px 0 #000;
 }
 
 .welcome__description {
   font-family: var(--font-primary);
   font-weight: var(--fw-regular);
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--color-text-body);
-  margin-bottom: 8px;
-  max-width: 380px;
+  margin-bottom: 6px;
+  max-width: 360px;
 }
 
 .welcome__cta {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 12px 28px;
   background-color: var(--color-primary);
   color: var(--color-white);
   font-family: var(--font-primary);
   font-weight: var(--fw-medium);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   border-radius: 10px;
   transition: background-color 0.3s ease;
-  margin-top: 14px;
+  margin-top: 10px;
   align-self: flex-start;
 }
 
@@ -73,6 +75,8 @@
   position: relative;
   overflow: hidden;
   border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Slider Container - fixed frame for smooth auto slideshow */
@@ -81,6 +85,8 @@
   width: 100%;
   height: 100%;
   min-height: 480px;
+  margin: 0;
+  padding: 0;
 }
 
 .welcome__slide {

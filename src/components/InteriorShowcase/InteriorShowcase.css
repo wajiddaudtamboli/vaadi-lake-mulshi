@@ -2,6 +2,7 @@
   display: flex;
   min-height: 500px;
   background-color: var(--color-white);
+  margin-bottom: 112px;
 }
 
 /* Left Side - Content */

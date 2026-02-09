@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './WelcomeSection.css';
-import welcomeImg1 from '../../assets/Images for Landing Pages/A001.svg';
+import welcomeImg1 from '../../assets/Images for Landing Pages/49.jpg';
 import welcomeImg2 from '../../assets/Images for Landing Pages/Welcome.jpg';
 
 const images = [welcomeImg1, welcomeImg2];
