@@ -170,15 +170,10 @@
     max-width: 100%;
   }
 
+  /* Hide indicators and nav from tablet/narrow desktop down; slideshow still works */
+  .villa-showcase__indicators,
   .villa-showcase__nav {
-    bottom: 0;
-    right: 0;
-  }
-
-  .villa-showcase__nav-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 12px;
+    display: none !important;
   }
 }
 
@@ -210,15 +205,10 @@
     font-size: 12px;
   }
 
+  /* Hide indicators and nav on phone/tablet; slideshow still works (auto-advance) */
+  .villa-showcase__indicators,
   .villa-showcase__nav {
-    bottom: 0;
-    right: 0;
-  }
-
-  .villa-showcase__nav-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
+    display: none !important;
   }
 }
 
@@ -237,11 +227,6 @@
   
   .villa-showcase__image {
     height: 35vh;
-  }
-
-  .villa-showcase__nav {
-    bottom: 0;
-    right: 0;
   }
 }
 
@@ -277,9 +262,9 @@
     line-height: 1.5;
   }
 
+  .villa-showcase__indicators,
   .villa-showcase__nav {
-    bottom: 0;
-    right: 0;
+    display: none !important;
   }
 
   .villa-showcase__nav-btn {

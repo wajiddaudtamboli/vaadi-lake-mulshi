@@ -82,15 +82,39 @@
   object-fit: cover;
 }
 
-/* Slide Indicators (dots in frame, above image area) */
-.interior-showcase__indicators {
+/* Bottom bar: Prev + Next (together, left) | indicators (middle) */
+.interior-showcase__bottom {
   position: absolute;
-  bottom: 54px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
   z-index: 10;
+}
+
+.interior-showcase__nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+/* Same width as nav so indicators stay centered */
+.interior-showcase__nav-spacer {
+  flex: 0 0 auto;
+  width: 82px; /* 38 + 6 + 38 (two buttons + gap) */
+}
+
+.interior-showcase__indicators {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
 }
 
 .interior-showcase__indicator {
@@ -113,16 +137,6 @@
   background: rgba(255, 255, 255, 0.6);
 }
 
-/* Navigation Buttons */
-.interior-showcase__nav {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: auto;
-  display: flex;
-  gap: 6px;
-  z-index: 10;
-}
 
 .interior-showcase__nav-btn {
   width: 38px;
@@ -176,6 +190,11 @@
     font-size: 13px;
     max-width: 100%;
   }
+
+  /* Hide indicators and nav from tablet/narrow desktop down; slideshow still works */
+  .interior-showcase__bottom {
+    display: none !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -206,19 +225,9 @@
     font-size: 12px;
   }
   
-  .interior-showcase__nav {
-    bottom: 0;
-    left: 0;
-    right: auto;
-  }
-  
-  .interior-showcase__indicators {
-    bottom: 50px;
-  }
-  
-  .interior-showcase__nav-btn {
-    width: 34px;
-    height: 34px;
+  /* Hide indicators and nav on phone/tablet; slideshow still works (auto-advance) */
+  .interior-showcase__bottom {
+    display: none !important;
   }
 }
 
@@ -239,14 +248,7 @@
     height: 35vh;
   }
   
-  .interior-showcase__nav {
-    bottom: 0;
-    left: 0;
-    right: auto;
-  }
-  
   .interior-showcase__indicators {
-    bottom: 46px;
     gap: 6px;
   }
   
@@ -254,6 +256,10 @@
     width: 8px;
     height: 8px;
     border-width: 1.5px;
+  }
+  
+  .interior-showcase__nav-spacer {
+    width: 70px;
   }
   
   .interior-showcase__nav-btn {
@@ -299,15 +305,17 @@
     line-height: 1.5;
   }
   
-  .interior-showcase__nav {
-    bottom: 0;
-    left: 0;
-    right: auto;
+  .interior-showcase__nav-spacer {
+    width: 66px;
   }
   
   .interior-showcase__nav-btn {
     width: 30px;
     height: 30px;
+  }
+  
+  .interior-showcase__bottom {
+    display: none !important;
   }
 }
 

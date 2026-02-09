@@ -58,41 +58,42 @@ const InteriorShowcase = () => {
           ))}
         </div>
 
-        {/* Slide Indicators (dots above image) */}
-        <div className="interior-showcase__indicators">
-          {INTERIOR_IMAGES.map((_, index) => (
+        {/* Bottom bar: Prev + Next (together) | indicators (middle) */}
+        <div className="interior-showcase__bottom">
+          <div className="interior-showcase__nav">
             <button
-              key={index}
               type="button"
-              className={`interior-showcase__indicator ${index === currentIndex ? 'interior-showcase__indicator--active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Navigation Buttons */}
-        <div className="interior-showcase__nav">
-          <button
-            type="button"
-            className="interior-showcase__nav-btn"
-            aria-label="Previous"
-            onClick={goToPrevious}
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            className="interior-showcase__nav-btn"
-            aria-label="Next"
-            onClick={goToNext}
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
+              className="interior-showcase__nav-btn"
+              aria-label="Previous"
+              onClick={goToPrevious}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="interior-showcase__nav-btn"
+              aria-label="Next"
+              onClick={goToNext}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+          <div className="interior-showcase__indicators">
+            {INTERIOR_IMAGES.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`interior-showcase__indicator ${index === currentIndex ? 'interior-showcase__indicator--active' : ''}`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+          <div className="interior-showcase__nav-spacer" aria-hidden="true" />
         </div>
       </div>
     </section>

@@ -63,21 +63,24 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Bar: Left (logo + copyright) | Center (legal links) | Right (social) */}
       <div className="footer-bottom">
-        <div className="footer-bottom-left">
+        <div className="footer-bottom__left">
           <div className="footer-capricorn-logo">
             <img src={capricornLogo} alt="Capricorn Logo" className="footer-capricorn-icon-img" />
           </div>
-          <div className="footer-links">
+          <div className="footer-bottom__left-text">
             <span className="footer-copyright">©2024 CAPRICORN GROUP INDIA</span>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Cookie Policy</a>
-            <a href="#">Disclaimer</a>
             <span className="footer-developed">Designed and Developed By IDEALIZEER</span>
           </div>
         </div>
-        
+        <div className="footer-bottom__center">
+          <a href="#">Terms & Conditions</a>
+          <span className="footer-bottom__separator" aria-hidden="true">|</span>
+          <a href="#">Cookie Policy</a>
+          <span className="footer-bottom__separator" aria-hidden="true">|</span>
+          <a href="#">Disclaimer</a>
+        </div>
         <div className="footer-social">
           <a href="#" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor">
