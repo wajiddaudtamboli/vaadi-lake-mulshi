@@ -4,7 +4,7 @@ import welcomeImg1 from '../../assets/Images for Landing Pages/A001.svg';
 import welcomeImg2 from '../../assets/Images for Landing Pages/Welcome.jpg';
 
 const images = [welcomeImg1, welcomeImg2];
-const AUTO_SLIDE_INTERVAL = 5000; // 5 seconds
+const AUTO_SLIDE_INTERVAL_MS = 4500; // same speed as InteriorShowcase
 
 const WelcomeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,21 +22,22 @@ const WelcomeSection = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // Auto-slide (uses functional update so interval always has latest state)
-  useEffect(() => {
+  // Auto-slide: same speed as InteriorShowcase, keeps images moving in frame
+  const startAutoSlide = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, AUTO_SLIDE_INTERVAL);
+    }, AUTO_SLIDE_INTERVAL_MS);
+  };
+
+  useEffect(() => {
+    startAutoSlide();
     return () => clearInterval(timerRef.current);
   }, []);
 
-  // Pause auto-slide on hover
+  // Pause auto-slide on hover, resume at same speed when mouse leaves
   const handleMouseEnter = () => clearInterval(timerRef.current);
-  const handleMouseLeave = () => {
-    timerRef.current = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, AUTO_SLIDE_INTERVAL);
-  };
+  const handleMouseLeave = () => startAutoSlide();
 
   return (
     <section className="welcome">

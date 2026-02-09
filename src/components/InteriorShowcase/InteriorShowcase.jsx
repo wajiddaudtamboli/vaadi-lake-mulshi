@@ -23,6 +23,10 @@ const InteriorShowcase = () => {
     setCurrentIndex((prev) => (prev === INTERIOR_IMAGES.length - 1 ? 0 : prev + 1));
   };
 
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev === INTERIOR_IMAGES.length - 1 ? 0 : prev + 1));
@@ -53,6 +57,20 @@ const InteriorShowcase = () => {
             />
           ))}
         </div>
+
+        {/* Slide Indicators (dots above image) */}
+        <div className="interior-showcase__indicators">
+          {INTERIOR_IMAGES.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              className={`interior-showcase__indicator ${index === currentIndex ? 'interior-showcase__indicator--active' : ''}`}
+              onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
         {/* Navigation Buttons */}
         <div className="interior-showcase__nav">
           <button

@@ -82,6 +82,37 @@
   object-fit: cover;
 }
 
+/* Slide Indicators (dots in frame, above image area) */
+.interior-showcase__indicators {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.interior-showcase__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.interior-showcase__indicator--active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.interior-showcase__indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
 /* Navigation Buttons */
 .interior-showcase__nav {
   position: absolute;
@@ -181,6 +212,10 @@
     right: auto;
   }
   
+  .interior-showcase__indicators {
+    bottom: 50px;
+  }
+  
   .interior-showcase__nav-btn {
     width: 34px;
     height: 34px;
@@ -208,6 +243,17 @@
     bottom: 0;
     left: 0;
     right: auto;
+  }
+  
+  .interior-showcase__indicators {
+    bottom: 46px;
+    gap: 6px;
+  }
+  
+  .interior-showcase__indicator {
+    width: 8px;
+    height: 8px;
+    border-width: 1.5px;
   }
   
   .interior-showcase__nav-btn {
