@@ -26,11 +26,27 @@ const Navbar = () => {
 
       {/* Right - Navigation Links + Partner Section */}
       <nav className={`navbar__nav ${mobileMenuOpen ? 'navbar__nav--open' : ''}`}>
-        <Link to="/" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
-        <Link to="/about" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>VAADI</Link>
-        <Link to="/lifestyle" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>LIFESTYLE</Link>
-        <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>BLOGS</Link>
-        <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
+        {/* Close button inside nav for mobile */}
+        <button 
+          className="navbar__close-btn"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-label="Close menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        
+        {/* Menu Links Container */}
+        <div className="navbar__menu-links">
+          <Link to="/" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+          <Link to="/about" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>VAADI</Link>
+          <Link to="/lifestyle" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>LIFESTYLE</Link>
+          <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>BLOGS</Link>
+          <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
+        </div>
+        
+        {/* Partner Section at bottom */}
         <div className="navbar__partner-section">
           <img src={capricornLogo} alt="Capricorn" className="navbar__capricorn" />
         </div>
