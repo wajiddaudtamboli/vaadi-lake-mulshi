@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './HeroSection.css';
+import { useBookMeeting } from '../../context/BookMeetingContext';
 
 const HeroSection = () => {
+  const { openModal } = useBookMeeting();
+
   return (
     <section className="hero" id="home">
       {/* Left Side - Hero Image */}
@@ -25,7 +27,7 @@ const HeroSection = () => {
         <p className="hero__description">
           Immerse yourself in the harmonious blend of serene lakes, lush greenery, and the unspoiled beauty of Vaadi Lake Mulshi, where nature's melody rejuvenates your soul.
         </p>
-        <Link to="/book-meeting" className="hero__cta">BOOK NOW</Link>
+        <button type="button" className="hero__cta" onClick={openModal}>BOOK NOW</button>
       </div>
 
     </section>

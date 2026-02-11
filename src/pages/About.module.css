@@ -224,8 +224,9 @@
 }
 
 .eleganceEmblem {
-  width: 312px;
+  width: 260px;
   height: auto;
+  margin-right: 80px;
 }
 
 /* Amenities Section */

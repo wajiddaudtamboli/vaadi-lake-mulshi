@@ -1,3 +1,80 @@
+import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Amenities.css';
+
+const Amenities = () => {
+  const trackRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Pause animation on hover/drag
+  const handleMouseEnter = () => setIsPaused(true);
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    setIsDragging(false);
+  };
+
+  const handleMouseDown = () => setIsDragging(true);
+  const handleMouseUp = () => setIsDragging(false);
+
+  // Touch events for mobile
+  const handleTouchStart = () => {
+    setIsPaused(true);
+    setIsDragging(true);
+  };
+  const handleTouchEnd = () => {
+    setIsPaused(false);
+    setIsDragging(false);
+  };
+
+  return (
+    <section className="amenities-new" id="amenities">
+      <div className="amenities-new__header">
+        <p className="amenities-new__badge">Vaadi Lake Mulshi</p>
+        <h2 className="amenities-new__title">Amenities That Redefine Excellence</h2>
+        <p className="amenities-new__description">
+          Vaadi Lake Mulshi offers an exceptional array of meticulously designed amenities, thoughtfully curated to enrich every aspect of your lifestyle. From state-of-the-art wellness and recreation facilities to spaces for relaxation and indulgence, each feature reflects a commitment to excellence. Here, luxury transcends the ordinary, delivering an unparalleled experience of comfort, convenience, and exclusivity.
+        </p>
+      </div>
+
+      <div 
+        className="amenities-new__carousel"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div 
+          className={`amenities-new__track ${isPaused ? 'amenities-new__track--paused' : ''}`}
+          ref={trackRef}
+        >
+          <img 
+            src="https://vaadi.in/BentoGrid.png" 
+            alt="Amenities Loop" 
+            className="amenities-new__image"
+            draggable="false"
+          />
+          <img 
+            src="https://vaadi.in/BentoGrid.png" 
+            alt="Amenities Loop Duplicate" 
+            className="amenities-new__image"
+            draggable="false"
+          />
+        </div>
+      </div>
+
+      <div className="amenities-new__cta-wrapper">
+        <Link to="/contact" className="amenities-new__cta">SHOW MORE</Link>
+      </div>
+    </section>
+  );
+};
+
+export default Amenities;
+
+/* --- ORIGINAL CODE (COMMENTED OUT FOR TEMPORARY) ---
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import './Amenities.css';
 import img1 from '../../assets/Images for Landing Pages/14.png';
@@ -67,9 +144,7 @@ const Amenities = () => {
 
   const animate = useCallback(() => {
     if (!isPaused) {
-      // Row 1 moves left
       offset1Ref.current -= 1.2;
-      // Row 2 moves left (same direction)
       offset2Ref.current -= 1.2;
 
       if (Math.abs(offset1Ref.current) >= CARD_TOTAL_WIDTH) {
@@ -127,7 +202,6 @@ const Amenities = () => {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Row 1 */}
         <div className="amenities__row">
           <div className="amenities__track" ref={row1Ref}>
             {row1Order.map((index) => {
@@ -146,7 +220,6 @@ const Amenities = () => {
           </div>
         </div>
 
-        {/* Row 2 */}
         <div className="amenities__row">
           <div className="amenities__track" ref={row2Ref}>
             {row2Order.map((index) => {
@@ -174,3 +247,4 @@ const Amenities = () => {
 };
 
 export default Amenities;
+--- END ORIGINAL CODE --- */

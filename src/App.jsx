@@ -4,21 +4,34 @@ import LandingPage from './pages/LandingPage';
 import About from './pages/About';
 import Lifestyle from './pages/Lifestyle';
 import Contact from './pages/Contact';
-import BookMeeting from './pages/BookMeeting';
 import FloatingContactButtons from './components/FloatingContactButtons/FloatingContactButtons';
+import BookMeetingModal from './components/BookMeetingModal';
+import { BookMeetingProvider, useBookMeeting } from './context/BookMeetingContext';
 import './styles/global.css';
 
-function App() {
+function AppContent() {
+  const { isOpen, closeModal } = useBookMeeting();
+  
   return (
-    <BrowserRouter>
+    <>
       <FloatingContactButtons />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/lifestyle" element={<Lifestyle />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/book-meeting" element={<BookMeeting />} />
       </Routes>
+      <BookMeetingModal isOpen={isOpen} onClose={closeModal} />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <BookMeetingProvider>
+        <AppContent />
+      </BookMeetingProvider>
     </BrowserRouter>
   );
 }

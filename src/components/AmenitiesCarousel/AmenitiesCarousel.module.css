@@ -1,0 +1,231 @@
+.amenitiesSection {
+  text-align: center;
+  padding: 80px 0 0;
+  margin-bottom: 142px;
+  padding-bottom: 70px;
+}
+
+.amenitiesTitle {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.96px;
+  color: #000;
+  margin: 0 0 40px;
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.carouselTrack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  height: 450px;
+}
+
+.slide {
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  will-change: transform, opacity;
+}
+
+.slidePrev {
+  left: 0;
+  transform-origin: right center;
+}
+
+.slideCurrent {
+  left: 50%;
+  transform: translateX(-50%) scale(1.1) !important;
+}
+
+.slideNext {
+  right: 0;
+  transform-origin: left center;
+}
+
+.slideInner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slideImage {
+  width: 625px;
+  height: 422px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(46, 136, 170, 0.7);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: rgba(46, 136, 170, 0.9);
+}
+
+.navButtonLeft {
+  left: 48px;
+}
+
+.navButtonRight {
+  right: 48px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .carouselTrack {
+    height: 380px;
+  }
+
+  .slideImage {
+    width: 500px;
+    height: 338px;
+  }
+
+  .navButtonLeft {
+    left: 24px;
+  }
+
+  .navButtonRight {
+    right: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .amenitiesSection {
+    margin-bottom: 80px;
+    padding-bottom: 40px;
+  }
+
+  .amenitiesTitle {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .carouselTrack {
+    height: 320px;
+  }
+
+  .slideImage {
+    width: 400px;
+    height: 270px;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .navButtonLeft {
+    left: 16px;
+  }
+
+  .navButtonRight {
+    right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .amenitiesSection {
+    padding: 60px 0 0;
+    margin-bottom: 60px;
+  }
+
+  .amenitiesTitle {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .carouselContainer {
+    padding: 20px 0;
+  }
+
+  .carouselTrack {
+    height: 260px;
+  }
+
+  .slideImage {
+    width: 300px;
+    height: 202px;
+  }
+
+  .slidePrev,
+  .slideNext {
+    display: none;
+  }
+
+  .slideCurrent {
+    transform: translateX(-50%) scale(1) !important;
+  }
+
+  .navButton {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .navButtonLeft {
+    left: 8px;
+  }
+
+  .navButtonRight {
+    right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenitiesTitle {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 16px;
+  }
+
+  .carouselTrack {
+    height: 200px;
+  }
+
+  .slideImage {
+    width: 260px;
+    height: 175px;
+  }
+}

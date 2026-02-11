@@ -56,6 +56,29 @@ const InteriorShowcase = () => {
               className={`interior-showcase__slide${index === currentIndex ? ' interior-showcase__slide--active' : ''}`}
             />
           ))}
+          {/* Navigation buttons inside slide-wrap */}
+          <div className="interior-showcase__slide-nav">
+            <button
+              type="button"
+              className="interior-showcase__slide-nav-btn"
+              aria-label="Previous"
+              onClick={goToPrevious}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              className="interior-showcase__slide-nav-btn"
+              aria-label="Next"
+              onClick={goToNext}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Bottom bar: Prev + Next (together) | indicators (middle) */}

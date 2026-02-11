@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './WelcomeSection.css';
-import welcomeImg1 from '../../assets/Images for Landing Pages/49.jpg';
+import welcomeImg1 from '../../assets/Images for Landing Pages/A001.svg';
 import welcomeImg2 from '../../assets/Images for Landing Pages/Welcome.jpg';
+import welcomeImg3 from '../../assets/Images for Landing Pages/welcome1.jpg';
 
-const images = [welcomeImg1, welcomeImg2];
+const images = [welcomeImg1, welcomeImg2, welcomeImg3];
 const AUTO_SLIDE_INTERVAL_MS = 4500; // same speed as InteriorShowcase
 
 const WelcomeSection = () => {
@@ -48,7 +50,7 @@ const WelcomeSection = () => {
         <p className="welcome__description">
           Nestled amidst the tranquil landscapes of Mulshi, Vaadi Villas redefine luxury living with breathtaking serene views, sophisticated architecture, and unmatched exclusivity. Offering a seamless fusion of nature's serenity and modern opulence, these villas are thoughtfully designed to provide a refined lifestyle and the ultimate private retreat.
         </p>
-        <a href="#contact" className="welcome__cta">ENQUIRE NOW</a>
+        <Link to="/contact" className="welcome__cta">ENQUIRE NOW</Link>
       </div>
 
       {/* Right Side - Image Slideshow */}

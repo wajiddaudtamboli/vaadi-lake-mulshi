@@ -406,3 +406,164 @@
     font-size: 12px;
   }
 }
+
+/* ========================================
+   NEW AMENITIES STYLES (BentoGrid version)
+   ======================================== */
+
+.amenities-new {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+  background-color: var(--color-white);
+}
+
+.amenities-new__header {
+  max-width: 1024px;
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.amenities-new__badge {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: var(--color-text-body);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.amenities-new__title {
+  font-family: var(--font-optima);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 0.96px;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.amenities-new__description {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.17px;
+  color: #000;
+  max-width: 1024px;
+  margin: 0 auto 88px;
+}
+
+.amenities-new__carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 32px;
+  cursor: grab;
+}
+
+.amenities-new__carousel:active {
+  cursor: grabbing;
+}
+
+.amenities-new__track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollLoop 30s linear infinite;
+}
+
+.amenities-new__track--paused {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.amenities-new__image {
+  height: 700px;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.amenities-new__cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.amenities-new__cta {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-medium);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 14px 30px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.amenities-new__cta:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Responsive for new amenities */
+@media (max-width: 768px) {
+  .amenities-new__title {
+    font-size: 34px;
+    line-height: 48px;
+  }
+
+  .amenities-new__description {
+    font-size: 14px;
+    margin-bottom: 48px;
+    padding: 0 16px;
+  }
+
+  .amenities-new__image {
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities-new {
+    padding: 40px 0;
+  }
+
+  .amenities-new__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .amenities-new__description {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+
+  .amenities-new__image {
+    height: 400px;
+  }
+
+  .amenities-new__track {
+    animation-duration: 20s;
+  }
+}

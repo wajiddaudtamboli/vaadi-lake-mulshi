@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 8px;
 }
 
 .footer-qr-image {
@@ -137,6 +138,7 @@
 
 /* Bottom Bar: Left | Center | Right — responsive flex, no negative margins */
 .footer-bottom {
+  position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   background-color: #080c0c;
   padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1.5rem, 5vw, 6.25rem);
@@ -153,7 +155,7 @@
 .footer-bottom__left {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 2vw, 1.875rem);
+  gap: clamp(0.75rem, 1.5vw, 1rem);
   flex-shrink: 0;
   min-width: 0;
 }
@@ -174,6 +176,8 @@
   height: clamp(2rem, 4vw, 2.5rem);
   width: auto;
   object-fit: contain;
+  margin-right: 0.5rem;
+  margin-left: -1rem;
 }
 
 .footer-capricorn-text {
@@ -230,6 +234,7 @@
 .footer-bottom__separator {
   color: rgba(255, 255, 255, 0.4);
   font-size: clamp(0.625rem, 1vw, 0.6875rem);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -313,6 +318,10 @@
     padding: 1rem 2.5rem;
   }
 
+  .footer-capricorn-logo {
+    position: static;
+  }
+
   .footer-vaadi-icon {
     width: 70px;
   }
@@ -361,7 +370,11 @@
     align-items: center;
     text-align: center;
   }
-  
+
+  .footer-capricorn-logo {
+    position: static;
+  }
+
   .footer-bottom__center {
     justify-content: center;
   }

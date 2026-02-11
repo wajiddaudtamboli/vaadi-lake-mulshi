@@ -8,9 +8,10 @@ import chevronLeft from '../assets/about/chevron-left.svg';
 import chevronRight from '../assets/about/chevron-right.svg';
 import eleganceImage from '../assets/about/about-elegance-image.png';
 import vaadiEmblem from '../assets/about/vaadi-emblem.png';
-import amenitiesImage from '../assets/about/about-amenities.png';
 import freshPerspectiveImage from '../assets/about/about-fresh-perspective-e846a2.png';
 import Footer from '../components/Footer';
+import AmenitiesCarousel from '../components/AmenitiesCarousel';
+
 
 const About = () => {
   return (
@@ -78,10 +79,7 @@ const About = () => {
         </section>
 
         {/* Amenities Section */}
-        <section className={styles.amenitiesSection}>
-          <h2 className={styles.amenitiesTitle}>Exclusive Villa Amenities</h2>
-          <img src={amenitiesImage} alt="Exclusive Villa Amenities" className={styles.amenitiesImage} />
-        </section>
+        <AmenitiesCarousel />
 
         {/* Map Section */}
         <section className={styles.mapSection}>

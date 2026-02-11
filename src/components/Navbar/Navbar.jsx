@@ -26,19 +26,28 @@ const Navbar = () => {
 
       {/* Right - Navigation Links + Partner Section */}
       <nav className={`navbar__nav ${mobileMenuOpen ? 'navbar__nav--open' : ''}`}>
-        <Link to="/" className="navbar__link">HOME</Link>
-        <Link to="/about" className="navbar__link">VAADI</Link>
-        <Link to="/lifestyle" className="navbar__link">LIFESTYLE</Link>
-        <Link to="/contact" className="navbar__link">BLOGS</Link>
-        <Link to="/contact" className="navbar__link">CONTACT</Link>
+        <Link to="/" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+        <Link to="/about" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>VAADI</Link>
+        <Link to="/lifestyle" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>LIFESTYLE</Link>
+        <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>BLOGS</Link>
+        <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
         <div className="navbar__partner-section">
           <img src={capricornLogo} alt="Capricorn" className="navbar__capricorn" />
         </div>
       </nav>
 
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div 
+          className="navbar__overlay" 
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
       {/* Mobile Menu Button */}
       <button 
-        className="navbar__mobile-btn"
+        className={`navbar__mobile-btn ${mobileMenuOpen ? 'navbar__mobile-btn--open' : ''}`}
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         aria-label="Toggle menu"
       >

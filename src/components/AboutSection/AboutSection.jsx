@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AboutSection.css';
 import fullLogo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 002.png';
 const aboutVideoUrl = 'https://vaadi.in/actual-site-view.mp4';
@@ -33,7 +34,7 @@ const AboutSection = () => {
         </p>
 
         {/* CTA Button */}
-        <a href="#contact" className="about__cta">GET MORE INFO</a>
+        <Link to="/contact" className="about__cta">GET MORE INFO</Link>
       </div>
     </section>
   );

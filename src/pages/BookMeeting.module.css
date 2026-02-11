@@ -374,20 +374,20 @@
 @media (max-width: 1024px) {
   .root {
     flex-direction: column;
-    min-height: auto;
+    min-height: 0;
   }
 
   .leftPanel {
     flex: 1 1 auto;
     width: 100%;
     max-width: 100%;
-    min-height: auto;
+    min-height: 0;
     padding: 8px 0 24px 0;
   }
 
   .leftInner {
     max-width: 100%;
-    min-height: auto;
+    min-height: 0;
     padding: 20px 24px 24px 24px;
     margin: 0 auto;
   }
