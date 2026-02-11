@@ -48,8 +48,19 @@ const Navbar = () => {
       {/* Mobile Menu Button */}
       <button 
         className={`navbar__mobile-btn ${mobileMenuOpen ? 'navbar__mobile-btn--open' : ''}`}
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setMobileMenuOpen(!mobileMenuOpen);
+        }}
+        onTouchEnd={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setMobileMenuOpen(!mobileMenuOpen);
+        }}
         aria-label="Toggle menu"
+        aria-expanded={mobileMenuOpen}
+        type="button"
       >
         <span></span>
         <span></span>
