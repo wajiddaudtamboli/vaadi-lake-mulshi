@@ -85,17 +85,10 @@
   pointer-events: none;
 }
 
-/* Hamburger to X animation */
-.navbar__mobile-btn--open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar__mobile-btn--open span:nth-child(2) {
+/* Hamburger to X animation - Now just hide when open since we have close button inside */
+.navbar__mobile-btn--open {
   opacity: 0;
-}
-
-.navbar__mobile-btn--open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  pointer-events: none;
 }
 
 /* Close Button Inside Nav (Mobile Only) */

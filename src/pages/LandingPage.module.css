@@ -72,149 +72,231 @@
   }
 }
 
-/* Mobile - 768px and below */
+/* Mobile - 768px and below - Use standard mobile menu like other pages */
 @media (max-width: 768px) {
   .landingPage :global(.navbar) {
-    padding: 12px 10px !important;
-    justify-content: flex-start !important;
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-    gap: 0 !important;
-  }
-  
-  .landingPage :global(.navbar__logo) {
-    display: flex !important;
-    flex-shrink: 0 !important;
+    position: fixed !important;
+    padding: 12px 16px !important;
+    background: var(--color-white) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    z-index: 9999 !important;
   }
   
   .landingPage :global(.navbar__logo-img) {
-    width: 40px !important;
+    width: 50px !important;
     height: auto !important;
   }
   
+  /* Reset nav styles to allow Navbar.css mobile styles to apply */
   .landingPage :global(.navbar__nav) {
-    display: flex !important;
-    flex: 1 !important;
-    flex-wrap: nowrap !important;
-    justify-content: space-evenly !important;
-    align-items: center !important;
+    width: 82% !important;
+    max-width: 380px !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
     gap: 0 !important;
-    width: auto !important;
-    margin-left: 8px !important;
+    margin-left: 0 !important;
+    padding: 25px 28px 40px !important;
+    background: var(--color-white) !important;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15) !important;
+    z-index: 10001 !important;
+    transition: right 0.3s ease !important;
+  }
+
+  .landingPage :global(.navbar__nav--open) {
+    right: 0 !important;
   }
   
   .landingPage :global(.navbar__link) {
-    font-size: 8px !important;
+    font-size: 15px !important;
     font-weight: var(--fw-semibold) !important;
-    padding: 4px 0 !important;
-    white-space: nowrap !important;
-    letter-spacing: 0.04em !important;
+    padding: 18px 0 !important;
+    letter-spacing: 0.08em !important;
+    width: 100% !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
   
   .landingPage :global(.navbar__capricorn) {
-    height: 16px !important;
+    height: 28px !important;
   }
   
   .landingPage :global(.navbar__partner-section) {
     margin-left: 0 !important;
-    flex-shrink: 0 !important;
+    margin-top: auto !important;
+    padding-top: 30px !important;
+    width: 100% !important;
+  }
+
+  .landingPage :global(.navbar__mobile-btn) {
+    display: flex !important;
+    z-index: 10002 !important;
+  }
+
+  .landingPage :global(.navbar__close-btn) {
+    display: flex !important;
+  }
+
+  .landingPage :global(.navbar__menu-links) {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-top: 50px !important;
+    flex: 1 !important;
+  }
+
+  .landingPage :global(.navbar__overlay) {
+    display: block !important;
+    z-index: 10000 !important;
   }
 }
 
 /* Mobile - 480px */
 @media (max-width: 480px) {
   .landingPage :global(.navbar) {
-    padding: 10px 8px !important;
+    padding: 10px 14px !important;
   }
   
   .landingPage :global(.navbar__logo-img) {
-    width: 35px !important;
+    width: 45px !important;
     height: auto !important;
   }
   
   .landingPage :global(.navbar__nav) {
-    margin-left: 6px !important;
+    width: 85% !important;
+    padding: 22px 24px 35px !important;
+  }
+
+  .landingPage :global(.navbar__menu-links) {
+    margin-top: 45px !important;
   }
   
   .landingPage :global(.navbar__link) {
-    font-size: 7px !important;
-    padding: 3px 0 !important;
-    letter-spacing: 0.03em !important;
+    font-size: 14px !important;
+    padding: 16px 0 !important;
   }
   
   .landingPage :global(.navbar__capricorn) {
-    height: 14px !important;
+    height: 26px !important;
+  }
+
+  .landingPage :global(.navbar__partner-section) {
+    padding-top: 25px !important;
   }
 }
 
-/* Phone Desktop Mode (when phone requests desktop site) */
+/* Phone Desktop Mode (when phone requests desktop site) - Use mobile menu */
 @media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
        screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse),
        screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
   .landingPage :global(.navbar) {
-    position: absolute !important;
-    justify-content: space-between !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    flex-wrap: nowrap !important;
-    padding: 16px 24px !important;
-  }
-  
-  .landingPage :global(.navbar__logo) {
-    display: flex !important;
+    position: fixed !important;
+    padding: 12px 20px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    z-index: 9999 !important;
   }
   
   .landingPage :global(.navbar__logo-img) {
-    width: 70px !important;
+    width: 50px !important;
     height: auto !important;
   }
   
   .landingPage :global(.navbar__nav) {
-    width: auto !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-end !important;
-    gap: 20px !important;
+    width: 82% !important;
+    max-width: 380px !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    padding: 25px 28px 40px !important;
+    background: var(--color-white) !important;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15) !important;
+    z-index: 10001 !important;
+    transition: right 0.3s ease !important;
+  }
+
+  .landingPage :global(.navbar__nav--open) {
+    right: 0 !important;
   }
   
   .landingPage :global(.navbar__link) {
-    font-size: 10px !important;
+    font-size: 15px !important;
     font-weight: var(--fw-semibold) !important;
-    color: var(--color-text-dark) !important;
+    padding: 18px 0 !important;
     letter-spacing: 0.08em !important;
-    padding: 0 !important;
-    white-space: nowrap !important;
+    width: 100% !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
   
   .landingPage :global(.navbar__capricorn) {
-    height: 22px !important;
+    height: 28px !important;
   }
   
   .landingPage :global(.navbar__partner-section) {
-    margin-left: 14px !important;
+    margin-left: 0 !important;
+    margin-top: auto !important;
+    padding-top: 30px !important;
+    width: 100% !important;
+  }
+
+  .landingPage :global(.navbar__mobile-btn) {
+    display: flex !important;
+    z-index: 10002 !important;
+  }
+
+  .landingPage :global(.navbar__close-btn) {
+    display: flex !important;
+  }
+
+  .landingPage :global(.navbar__menu-links) {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-top: 50px !important;
+    flex: 1 !important;
+  }
+
+  .landingPage :global(.navbar__overlay) {
+    display: block !important;
+    z-index: 10000 !important;
   }
 }
 
 /* Small phones */
 @media screen and (max-width: 375px) {
   .landingPage :global(.navbar) {
-    padding: 8px 6px !important;
+    padding: 10px 12px !important;
   }
   
   .landingPage :global(.navbar__logo-img) {
-    width: 30px !important;
+    width: 42px !important;
   }
   
   .landingPage :global(.navbar__nav) {
-    margin-left: 4px !important;
+    width: 90% !important;
+    padding: 20px 22px 30px !important;
+  }
+
+  .landingPage :global(.navbar__menu-links) {
+    margin-top: 42px !important;
   }
   
   .landingPage :global(.navbar__link) {
-    font-size: 6px !important;
-    padding: 2px 0 !important;
-    letter-spacing: 0.02em !important;
+    font-size: 13px !important;
+    padding: 14px 0 !important;
   }
   
   .landingPage :global(.navbar__capricorn) {
-    height: 12px !important;
+    height: 24px !important;
+  }
+
+  .landingPage :global(.navbar__partner-section) {
+    padding-top: 22px !important;
   }
 }
