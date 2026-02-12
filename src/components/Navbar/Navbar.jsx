@@ -11,7 +11,6 @@ const Navbar = () => {
   const useAltLogo =
     location.pathname === '/contact' ||
     location.pathname === '/blogs' ||
-    location.pathname === '/lifestyle' ||
     location.pathname.startsWith('/blogs/');
 
   return (
