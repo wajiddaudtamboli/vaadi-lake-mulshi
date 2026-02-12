@@ -8,7 +8,6 @@ import capricornLogo from '../../assets/Images for Landing Pages/Frame 33380.png
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
   const useAltLogo =
     location.pathname === '/contact' ||
     location.pathname === '/blogs' ||
@@ -18,26 +17,17 @@ const Navbar = () => {
     <header className="navbar">
       {/* Left - Logo */}
       <div className="navbar__logo">
-        {isHomePage ? (
-          <>
-            <img
-              src={logoDefault}
-              alt="Vaadi Lake Mulshi"
-              className="navbar__logo-img navbar__logo-img--desktop"
-            />
-            <img
-              src={logoAlt}
-              alt="Vaadi Lake Mulshi"
-              className="navbar__logo-img navbar__logo-img--mobile"
-            />
-          </>
-        ) : (
-          <img
-            src={useAltLogo ? logoAlt : logoDefault}
-            alt="Vaadi Lake Mulshi"
-            className="navbar__logo-img"
-          />
-        )}
+        {/* Always render both logos for CSS media query swapping (phone desktop mode) */}
+        <img
+          src={useAltLogo ? logoAlt : logoDefault}
+          alt="Vaadi Lake Mulshi"
+          className="navbar__logo-img navbar__logo-img--desktop"
+        />
+        <img
+          src={logoAlt}
+          alt="Vaadi Lake Mulshi"
+          className="navbar__logo-img navbar__logo-img--mobile"
+        />
       </div>
 
       {/* Right - Navigation Links + Partner Section */}
