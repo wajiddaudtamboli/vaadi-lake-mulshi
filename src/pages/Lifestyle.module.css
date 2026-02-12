@@ -65,9 +65,8 @@
   }
   
   .hero :global(.navbar__link) {
-    color: #FFFFFF !important;
+    color: var(--color-text-dark) !important;
     font-weight: 600;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -82,8 +81,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: #FFFFFF !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    color: var(--color-text-dark) !important;
   }
 }
 
@@ -95,8 +93,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: #FFFFFF !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    color: var(--color-text-dark) !important;
   }
 }
 
@@ -109,8 +106,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: #FFFFFF !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    color: var(--color-text-dark) !important;
   }
 }
 
