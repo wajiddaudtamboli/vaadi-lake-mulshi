@@ -47,14 +47,16 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   padding: 8px 0 0 0;
 }
 
 .leftInner {
   position: relative;
   width: 100%;
-  background: #FFFFFF;
+  background: transparent;
   padding: 24px 32px 32px 40px;
   box-sizing: border-box;
 }
