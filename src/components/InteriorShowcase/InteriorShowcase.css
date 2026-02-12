@@ -278,6 +278,11 @@
   .interior-showcase__bottom {
     display: none !important;
   }
+  
+  /* Hide arrow navigation buttons on mobile */
+  .interior-showcase__slide-nav {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {
