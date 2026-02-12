@@ -23,6 +23,15 @@
   object-fit: contain;
 }
 
+/* Home page logo variants - desktop shown on laptop, mobile shown on phone */
+.navbar__logo-img--desktop {
+  display: block;
+}
+
+.navbar__logo-img--mobile {
+  display: none;
+}
+
 /* Navigation */
 .navbar__nav {
   display: flex;
@@ -176,6 +185,15 @@
   .navbar__logo-img {
     width: 50px;
     height: auto;
+  }
+
+  /* Swap logos on mobile - show mobile logo, hide desktop logo */
+  .navbar__logo-img--desktop {
+    display: none;
+  }
+
+  .navbar__logo-img--mobile {
+    display: block;
   }
   
   .navbar__mobile-btn {
@@ -478,6 +496,15 @@
     height: auto;
   }
 
+  /* Swap logos - show mobile logo, hide desktop logo */
+  .navbar__logo-img--desktop {
+    display: none;
+  }
+
+  .navbar__logo-img--mobile {
+    display: block;
+  }
+
   .navbar__mobile-btn {
     display: flex;
     z-index: 10002;
@@ -595,6 +622,15 @@
   .navbar__logo-img {
     width: 50px;
     height: auto;
+  }
+
+  /* Swap logos - show mobile logo, hide desktop logo */
+  .navbar__logo-img--desktop {
+    display: none;
+  }
+
+  .navbar__logo-img--mobile {
+    display: block;
   }
 
   .navbar__mobile-btn {
