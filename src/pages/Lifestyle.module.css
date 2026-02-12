@@ -65,7 +65,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: var(--color-text-dark) !important;
+    color: #333333 !important;
     font-weight: 600;
   }
 }
@@ -81,7 +81,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: var(--color-text-dark) !important;
+    color: #333333 !important;
   }
 }
 
@@ -93,7 +93,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: var(--color-text-dark) !important;
+    color: #333333 !important;
   }
 }
 
@@ -106,7 +106,7 @@
   }
   
   .hero :global(.navbar__link) {
-    color: var(--color-text-dark) !important;
+    color: #333333 !important;
   }
 }
 
@@ -155,7 +155,7 @@
     letter-spacing: 0.08em !important;
     width: 100% !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-    color: var(--color-text-dark) !important;
+    color: #333333 !important;
   }
   
   .hero :global(.navbar__capricorn) {
