@@ -148,14 +148,14 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--color-primary);
   border: none;
-  border-radius: 50%;
+  border-radius: 0;
   cursor: pointer;
   transition: background 0.3s;
   z-index: 5;
@@ -163,7 +163,7 @@
 
 .sliderButtonLeft:hover,
 .sliderButtonRight:hover {
-  background: rgba(255, 255, 255, 1);
+  background: var(--color-primary-dark);
 }
 
 .sliderButtonLeft {
@@ -176,8 +176,9 @@
 
 .sliderChevronLeft,
 .sliderChevronRight {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
 }
 
 /* Elegance Section */
