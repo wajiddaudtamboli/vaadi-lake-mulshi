@@ -48,7 +48,6 @@ const Navbar = () => {
           <Link to="/" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
           <Link to="/about" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>VAADI</Link>
           <Link to="/lifestyle" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>LIFESTYLE</Link>
-          <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>BLOGS</Link>
           <Link to="/contact" className="navbar__link" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
         </div>
         
