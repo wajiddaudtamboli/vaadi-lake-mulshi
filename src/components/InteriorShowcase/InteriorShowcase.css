@@ -93,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(46, 136, 170, 0.7);
+  background-color: var(--color-primary);
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -101,7 +101,7 @@
 }
 
 .interior-showcase__slide-nav-btn:hover {
-  background-color: rgba(46, 136, 170, 0.9);
+  background-color: var(--color-primary-dark);
 }
 
 .interior-showcase__slide-nav-btn svg {

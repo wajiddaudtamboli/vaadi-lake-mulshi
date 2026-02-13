@@ -35,16 +35,6 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
 }
 
-.floating-contact__button--phone {
-  width: 64px;
-  height: 52px;
-}
-
-.floating-contact__button--whatsapp {
-  width: 64px;
-  height: 52px;
-}
-
 @media (max-width: 480px) {
   .floating-contact {
     bottom: 18px;
@@ -60,15 +50,5 @@
   .floating-contact__button img {
     width: 100%;
     height: 100%;
-  }
-
-  .floating-contact__button--phone {
-    width: 64px;
-    height: 52px;
-  }
-
-  .floating-contact__button--whatsapp {
-    width: 64px;
-    height: 52px;
   }
 }

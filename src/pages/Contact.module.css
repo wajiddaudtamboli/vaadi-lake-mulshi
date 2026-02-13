@@ -204,7 +204,7 @@
   background: var(--color-primary);
   color: #ffffff;
   border: 1px solid var(--color-primary);
-  border-radius: 10px;
+  border-radius: 0;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -386,7 +386,6 @@
   .title {
     font-size: 32px;
     line-height: 42px;
-    margin-top: -10px;
   }
   
   .infoCard {
@@ -694,7 +693,6 @@
     font-size: 32px;
     line-height: 1.2;
     margin-bottom: 16px;
-    margin-top: 15px;
   }
   
   .infoCard {

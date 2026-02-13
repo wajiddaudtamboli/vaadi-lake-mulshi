@@ -152,7 +152,7 @@
 .welcome__nav-btn {
   width: 36px;
   height: 36px;
-  background: rgba(46, 136, 170, 0.7);
+  background: var(--color-primary);
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -165,7 +165,7 @@
 }
 
 .welcome__nav-btn:hover {
-  background: rgba(46, 136, 170, 0.9);
+  background: var(--color-primary-dark);
 }
 
 /* Responsive */
