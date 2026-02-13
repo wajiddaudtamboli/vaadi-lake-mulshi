@@ -99,7 +99,7 @@
   height: 36px;
   background: var(--color-primary);
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   cursor: pointer;
   font-size: 14px;
   color: #ffffff;

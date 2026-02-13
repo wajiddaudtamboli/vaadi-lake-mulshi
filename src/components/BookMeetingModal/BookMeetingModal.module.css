@@ -259,7 +259,7 @@
   color: #FFFFFF;
   background: var(--color-primary, #A57C52);
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   letter-spacing: 0.1em;
   cursor: pointer;
   transition: opacity 0.2s ease;

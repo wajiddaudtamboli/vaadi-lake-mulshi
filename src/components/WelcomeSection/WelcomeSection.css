@@ -58,7 +58,7 @@
   font-weight: var(--fw-medium);
   font-size: 11px;
   letter-spacing: 0.12em;
-  border-radius: 10px;
+  border-radius: 0;
   transition: background-color 0.3s ease;
   margin-top: 6px;
   align-self: flex-start;
@@ -154,7 +154,7 @@
   height: 36px;
   background: var(--color-primary);
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   cursor: pointer;
   font-size: 14px;
   color: #ffffff;
