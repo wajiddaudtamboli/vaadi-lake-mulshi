@@ -42,7 +42,7 @@
 .navbar__link {
   font-family: var(--font-primary);
   font-weight: var(--fw-medium);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   color: var(--color-text-dark);
   transition: opacity 0.3s ease;
@@ -143,7 +143,7 @@
   }
   
   .navbar__link {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -157,7 +157,7 @@
   }
   
   .navbar__link {
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .navbar__logo-img {
@@ -267,7 +267,7 @@
   
   .navbar__link {
     color: var(--color-text-dark);
-    font-size: 15px;
+    font-size: 17px;
     font-weight: var(--fw-semibold);
     letter-spacing: 0.08em;
     padding: 18px 0;
@@ -326,7 +326,7 @@
   }
   
   .navbar__link {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: var(--fw-semibold);
     padding: 16px 0;
     letter-spacing: 0.06em;
@@ -403,7 +403,7 @@
   }
   
   .navbar__link {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: var(--fw-semibold);
     padding: 10px 0;
     letter-spacing: 0.06em;
@@ -457,7 +457,7 @@
   }
   
   .navbar__link {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: var(--fw-semibold);
     letter-spacing: 0.05em;
     padding: 14px 0;
@@ -576,7 +576,7 @@
   }
   
   .navbar__link {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: var(--fw-semibold);
     letter-spacing: 0.08em;
     white-space: nowrap;
@@ -705,7 +705,7 @@
   }
   
   .navbar__link {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: var(--fw-semibold);
     letter-spacing: 0.08em;
     white-space: nowrap;

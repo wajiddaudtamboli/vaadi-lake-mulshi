@@ -602,7 +602,7 @@
   }
   
   .eleganceEmblem {
-    width: 150px;
+    display: none;
   }
   
   .amenitiesSection {
@@ -952,5 +952,9 @@
   .partnerLogo {
     width: 80px;
     margin-left: 10px;
+  }
+  
+  .eleganceEmblem {
+    width: 120px;
   }
 }

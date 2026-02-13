@@ -23,17 +23,9 @@ const Gallery = () => {
         <div className="gallery__column">
           <div className="gallery__item gallery__item--tall">
             <img src={gallery1} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
           <div className="gallery__item gallery__item--short">
             <img src={gallery5} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
         </div>
 
@@ -41,17 +33,9 @@ const Gallery = () => {
         <div className="gallery__column">
           <div className="gallery__item gallery__item--short">
             <img src={gallery2} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
           <div className="gallery__item gallery__item--tall">
             <img src={gallery6} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
         </div>
 
@@ -59,17 +43,9 @@ const Gallery = () => {
         <div className="gallery__column">
           <div className="gallery__item gallery__item--tall">
             <img src={gallery3} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
           <div className="gallery__item gallery__item--short">
             <img src={gallery7} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
         </div>
 
@@ -77,17 +53,9 @@ const Gallery = () => {
         <div className="gallery__column">
           <div className="gallery__item gallery__item--short">
             <img src={gallery4} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
           <div className="gallery__item gallery__item--tall">
             <img src={gallery8} alt="Gallery" />
-            <div className="gallery__overlay">
-              <p className="gallery__overlay-title">Effective product marketing</p>
-              <p className="gallery__overlay-text">Lorem Ipsum is simply dummy</p>
-            </div>
           </div>
         </div>
       </div>
