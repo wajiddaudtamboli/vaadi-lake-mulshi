@@ -383,3 +383,12 @@
     font-size: 22px;
   }
 }
+
+/* Desktop mode on phone browsers - hide arrow buttons */
+@media screen and (min-width: 980px) and (max-width: 1280px) and (max-device-width: 768px),
+       screen and (min-width: 980px) and (max-width: 1280px) and (hover: none) and (pointer: coarse),
+       screen and (min-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .interior-showcase__slide-nav {
+    display: none !important;
+  }
+}
