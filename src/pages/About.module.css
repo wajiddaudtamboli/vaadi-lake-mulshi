@@ -955,6 +955,8 @@
   }
   
   .eleganceEmblem {
-    width: 120px;
+    width: 170px;
+    align-self: center;
+    margin: 0 auto;
   }
 }
