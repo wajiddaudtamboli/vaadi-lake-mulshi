@@ -97,7 +97,7 @@
 .villa-showcase__nav-btn {
   width: 36px;
   height: 36px;
-  background: var(--color-primary);
+  background: rgba(46, 136, 170, 0.7);
   border: none;
   border-radius: 0;
   cursor: pointer;
@@ -110,7 +110,7 @@
 }
 
 .villa-showcase__nav-btn:hover {
-  background: var(--color-primary-dark);
+  background: rgba(46, 136, 170, 0.9);
 }
 
 .villa-showcase__badge {

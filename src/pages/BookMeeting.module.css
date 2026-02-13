@@ -247,7 +247,7 @@
   color: #FFFFFF;
   background: var(--color-primary);
   border: none;
-  border-radius: 0;
+  border-radius: 10px;
   letter-spacing: 0.12em;
   cursor: pointer;
   position: relative;
