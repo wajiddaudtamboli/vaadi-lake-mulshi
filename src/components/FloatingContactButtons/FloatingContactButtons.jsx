@@ -1,6 +1,6 @@
 import React from 'react';
 import './FloatingContactButtons.css';
-import contactIcon from '../../assets/icons/contact-outline.svg';
+import contactIcon from '../../assets/Images for Landing Pages/phone.svg';
 import whatsappIcon from '../../assets/icons/whatsapp-outline.svg';
 
 const FloatingContactButtons = () => {
