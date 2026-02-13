@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import styles from './About.module.css';
 
 import sliderImage from '../assets/about/about-slider.png';
+import slider52 from '../assets/Images for Landing Pages/52.jpg';
+import slider53 from '../assets/Images for Landing Pages/53.jpg';
+import slider54 from '../assets/Images for Landing Pages/54.jpg';
+import slider55 from '../assets/Images for Landing Pages/55.jpg';
+import slider56 from '../assets/Images for Landing Pages/56.jpg';
+import slider57 from '../assets/Images for Landing Pages/57.jpg';
 import chevronLeft from '../assets/about/chevron-left.svg';
 import chevronRight from '../assets/about/chevron-right.svg';
 import eleganceImage from '../assets/about/about-elegance-image.png';
@@ -12,8 +18,35 @@ import freshPerspectiveImage from '../assets/about/about-fresh-perspective-e846a
 import Footer from '../components/Footer';
 import AmenitiesCarousel from '../components/AmenitiesCarousel';
 
+const sliderImages = [slider52, slider53, slider54, slider55, slider56, slider57];
+const AUTO_SLIDE_INTERVAL_MS = 4500;
 
 const About = () => {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const timerRef = useRef(null);
+
+  const goToNextSlide = () => {
+    setCurrentSlideIndex((prev) => (prev + 1) % sliderImages.length);
+  };
+
+  const goToPrevSlide = () => {
+    setCurrentSlideIndex((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+  };
+
+  const startAutoSlide = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
+      setCurrentSlideIndex((prev) => (prev + 1) % sliderImages.length);
+    }, AUTO_SLIDE_INTERVAL_MS);
+  };
+
+  useEffect(() => {
+    startAutoSlide();
+    return () => clearInterval(timerRef.current);
+  }, []);
+
+  const handleMouseEnter = () => clearInterval(timerRef.current);
+  const handleMouseLeave = () => startAutoSlide();
   return (
     <main className={styles.aboutViewport}>
       <div className={styles.aboutPage}>
@@ -50,12 +83,23 @@ const About = () => {
         </section>
 
         {/* Slider Section */}
-        <section className={styles.sliderSection}>
-          <img src={sliderImage} alt="Vaadi Lake Mulshi Villas" className={styles.sliderImage} />
-          <button type="button" className={styles.sliderButtonLeft} aria-label="Previous">
+        <section 
+          className={styles.sliderSection}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {sliderImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Vaadi Lake Mulshi Villas ${index + 1}`}
+              className={`${styles.sliderImage} ${index === currentSlideIndex ? styles.sliderImageActive : ''}`}
+            />
+          ))}
+          <button type="button" className={styles.sliderButtonLeft} onClick={goToPrevSlide} aria-label="Previous">
             <img src={chevronLeft} alt="" className={styles.sliderChevronLeft} aria-hidden="true" />
           </button>
-          <button type="button" className={styles.sliderButtonRight} aria-label="Next">
+          <button type="button" className={styles.sliderButtonRight} onClick={goToNextSlide} aria-label="Next">
             <img src={chevronRight} alt="" className={styles.sliderChevronRight} aria-hidden="true" />
           </button>
         </section>
