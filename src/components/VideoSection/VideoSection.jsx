@@ -1,6 +1,5 @@
 import React from 'react';
 import './VideoSection.css';
-import videoCoverPoster from '../../assets/Images for Landing Pages/video-cover.png';
 
 const VideoSection = () => {
   return (
@@ -9,7 +8,6 @@ const VideoSection = () => {
         <video
           className="video-section__video"
           src="https://vaadi.in/capricorn-mulshi-vaadi.mp4"
-          poster={videoCoverPoster}
           autoPlay
           loop
           muted
