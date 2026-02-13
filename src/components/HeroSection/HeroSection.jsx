@@ -1,6 +1,7 @@
 import React from 'react';
 import './HeroSection.css';
 import { useBookMeeting } from '../../context/BookMeetingContext';
+import homeVaadiPoster from '../../assets/Images for Landing Pages/home-vaadi.png';
 
 const HeroSection = () => {
   const { openModal } = useBookMeeting();
@@ -12,6 +13,7 @@ const HeroSection = () => {
         <video
           className="hero__video-player"
           src="https://vaadi.in/hero1.mp4"
+          poster={homeVaadiPoster}
           autoPlay
           loop
           muted

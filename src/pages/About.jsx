@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import styles from './About.module.css';
 
+import videoCoverPoster from '../assets/Images for Landing Pages/video-cover.png';
 import sliderImage from '../assets/about/about-slider.png';
 import slider52 from '../assets/Images for Landing Pages/52.jpg';
 import slider53 from '../assets/Images for Landing Pages/53.jpg';
@@ -57,6 +58,7 @@ const About = () => {
             muted
             loop
             playsInline
+            poster={videoCoverPoster}
             className={styles.heroImage}
           >
             <source src="https://vaadi.in/hero-about1.mp4" type="video/mp4" />
