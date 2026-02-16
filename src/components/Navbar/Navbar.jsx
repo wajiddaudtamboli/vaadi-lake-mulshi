@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="navbar">
       {/* Left - Logo */}
-      <div className="navbar__logo">
+      <Link to="/" className="navbar__logo">
         {/* Always render both logos for CSS media query swapping (phone desktop mode) */}
         <img
           src={useAltLogo ? logoAlt : logoDefault}
@@ -28,7 +28,7 @@ const Navbar = () => {
           alt="Vaadi Lake Mulshi"
           className="navbar__logo-img navbar__logo-img--mobile"
         />
-      </div>
+      </Link>
 
       {/* Right - Navigation Links + Partner Section */}
       <nav className={`navbar__nav ${mobileMenuOpen ? 'navbar__nav--open' : ''}`}>

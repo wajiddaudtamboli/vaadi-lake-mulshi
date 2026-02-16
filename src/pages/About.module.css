@@ -153,17 +153,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-primary);
+  background: rgba(46, 136, 170, 0.7);
   border: none;
   border-radius: 0;
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 14px;
+  color: #ffffff;
+  transition: background 0.3s ease;
   z-index: 5;
 }
 
 .sliderButtonLeft:hover,
 .sliderButtonRight:hover {
-  background: var(--color-primary-dark);
+  background: rgba(46, 136, 170, 0.9);
 }
 
 .sliderButtonLeft {
@@ -172,13 +174,6 @@
 
 .sliderButtonRight {
   right: 32px;
-}
-
-.sliderChevronLeft,
-.sliderChevronRight {
-  width: 16px;
-  height: 16px;
-  color: #ffffff;
 }
 
 /* Elegance Section */
@@ -574,13 +569,17 @@
   
   .sliderButtonLeft,
   .sliderButtonRight {
-    display: none;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
   }
   
-  .sliderChevronLeft,
-  .sliderChevronRight {
-    width: 20px;
-    height: 20px;
+  .sliderButtonLeft {
+    left: 16px;
+  }
+  
+  .sliderButtonRight {
+    right: 16px;
   }
   
   .eleganceImage {
@@ -704,7 +703,17 @@
   
   .sliderButtonLeft,
   .sliderButtonRight {
-    display: none;
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+  
+  .sliderButtonLeft {
+    left: 12px;
+  }
+  
+  .sliderButtonRight {
+    right: 12px;
   }
   
   .eleganceImage {
@@ -958,6 +967,8 @@
   
   .sliderButtonLeft,
   .sliderButtonRight {
-    display: none;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
   }
 }

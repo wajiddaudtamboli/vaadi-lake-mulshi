@@ -1,31 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Amenities.css';
 
 const Amenities = () => {
   const trackRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-
-  // Pause animation on hover/drag
-  const handleMouseEnter = () => setIsPaused(true);
-  const handleMouseLeave = () => {
-    setIsPaused(false);
-    setIsDragging(false);
-  };
-
-  const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
-
-  // Touch events for mobile
-  const handleTouchStart = () => {
-    setIsPaused(true);
-    setIsDragging(true);
-  };
-  const handleTouchEnd = () => {
-    setIsPaused(false);
-    setIsDragging(false);
-  };
 
   return (
     <section className="amenities-new" id="amenities">
@@ -37,17 +15,9 @@ const Amenities = () => {
         </p>
       </div>
 
-      <div 
-        className="amenities-new__carousel"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
+      <div className="amenities-new__carousel">
         <div 
-          className={`amenities-new__track ${isPaused ? 'amenities-new__track--paused' : ''}`}
+          className="amenities-new__track"
           ref={trackRef}
         >
           <img 

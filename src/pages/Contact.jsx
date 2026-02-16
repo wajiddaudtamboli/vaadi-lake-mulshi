@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -34,6 +34,37 @@ function buildContactInquiryMessage(data) {
 
 const Contact = () => {
   const formRef = useRef(null);
+
+  // Update meta tags for SEO
+  useEffect(() => {
+    // Update title
+    document.title = 'Contact Vaadi – Schedule a Private Visit or Enquire Now';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Interested in owning a lakeside villa at Vaadi? Contact our team to schedule a private tour, request the brochure, or get answers to all your queries.');
+    }
+    
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://vaadi.in/contact');
+    
+    // Update OG tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'Contact Vaadi – Schedule a Private Visit or Enquire Now');
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', 'Interested in owning a lakeside villa at Vaadi? Contact our team to schedule a private tour, request the brochure, or get answers to all your queries.');
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://vaadi.in/contact');
+  }, []);
 
   const openContactWhatsApp = () => {
     const form = formRef.current;

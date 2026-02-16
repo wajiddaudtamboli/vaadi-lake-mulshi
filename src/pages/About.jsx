@@ -1,18 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import styles from './About.module.css';
 
 import videoCoverPoster from '../assets/Images for Landing Pages/video-cover.png';
-import sliderImage from '../assets/about/about-slider.png';
 import slider52 from '../assets/Images for Landing Pages/52.jpg';
 import slider53 from '../assets/Images for Landing Pages/53.jpg';
 import slider54 from '../assets/Images for Landing Pages/54.jpg';
 import slider55 from '../assets/Images for Landing Pages/55.jpg';
 import slider56 from '../assets/Images for Landing Pages/56.jpg';
 import slider57 from '../assets/Images for Landing Pages/57.jpg';
-import chevronLeft from '../assets/about/chevron-left.svg';
-import chevronRight from '../assets/about/chevron-right.svg';
 import eleganceImage from '../assets/about/about-elegance-image.png';
 import vaadiEmblem from '../assets/about/vaadi-emblem.png';
 import freshPerspectiveImage from '../assets/about/about-fresh-perspective-e846a2.png';
@@ -44,6 +40,37 @@ const About = () => {
   useEffect(() => {
     startAutoSlide();
     return () => clearInterval(timerRef.current);
+  }, []);
+
+  // Update meta tags for SEO
+  useEffect(() => {
+    // Update title
+    document.title = 'About Vaadi – Crafted by Capricorn Group';
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Vaadi is more than a residence it\'s a curated lifestyle by Capricorn Group. Learn about our vision, legacy, and design philosophy behind Mulshi\'s finest villa estate.');
+    }
+    
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', 'https://vaadi.in/about-us');
+    
+    // Update OG tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', 'About Vaadi – Crafted by Capricorn Group');
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', 'Vaadi is more than a residence it\'s a curated lifestyle by Capricorn Group. Learn about our vision, legacy, and design philosophy behind Mulshi\'s finest villa estate.');
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://vaadi.in/about-us');
   }, []);
 
   const handleMouseEnter = () => clearInterval(timerRef.current);
@@ -99,10 +126,10 @@ const About = () => {
             />
           ))}
           <button type="button" className={styles.sliderButtonLeft} onClick={goToPrevSlide} aria-label="Previous">
-            <img src={chevronLeft} alt="" className={styles.sliderChevronLeft} aria-hidden="true" />
+            &lt;
           </button>
           <button type="button" className={styles.sliderButtonRight} onClick={goToNextSlide} aria-label="Next">
-            <img src={chevronRight} alt="" className={styles.sliderChevronRight} aria-hidden="true" />
+            &gt;
           </button>
         </section>
 

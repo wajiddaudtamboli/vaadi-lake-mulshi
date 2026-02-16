@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../../assets/Images for Landing Pages/Vaadi Logo PNG 003.png';
 import scannerImg from '../../assets/Images for Landing Pages/scanner.png';
@@ -11,9 +12,9 @@ const Footer = () => {
         {/* Brand Column */}
         <div className="footer-brand">
           <div className="footer-logos">
-            <div className="footer-vaadi-logo">
+            <Link to="/" className="footer-vaadi-logo">
               <img src={logo} alt="Vaadi Logo" className="footer-vaadi-icon" />
-            </div>
+            </Link>
             <div className="footer-qr">
               <img src={scannerImg} alt="QR Code" className="footer-qr-image" />
             </div>
