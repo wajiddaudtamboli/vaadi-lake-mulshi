@@ -1,5 +1,6 @@
 <h1 align="center">Vaadi</h1>
 <p align="center"><em>Where Luxury Meets Nature</em></p>
+<img width="1536" height="1024" alt="Vaadi Website" src="https://github.com/user-attachments/assets/0849d6ad-c973-42ce-84b6-7c0f8b9a9fd0" />
 
 <p align="center">
   <a href="#overview">Overview</a> •
