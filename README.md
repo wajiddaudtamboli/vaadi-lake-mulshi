@@ -20,6 +20,15 @@ Built with precision and attention to detail, every pixel has been carefully pla
 
 ---
 
+## Design & Documentation
+
+| Resource | Link |
+|----------|------|
+| **Figma Design** | [Vaadi Design Prototype](https://www.figma.com/design/3OrzQB8yciGPKsR4U64mvR/Vaadi-04-02-2026?node-id=0-1&t=EmSE3bR2kcCq21pf-1) |
+| **Work Update Sheet** | [Idealizeer Content Solutions - Work Update](https://docs.google.com/spreadsheets/d/1y9WzHMy1HfAtBbsL8Lai-UUmigpkhGry/edit?usp=sharing&ouid=101235130192854067199&rtpof=true&sd=true) |
+
+---
+
 ## Features
 
 **Immersive Visual Experience**
@@ -101,8 +110,8 @@ vaadi-travel/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/vaadi-website.git
-   cd vaadi-website/vaadi-travel
+   git clone https://github.com/wajiddaudtamboli/vaadi-lake-mulshi.git
+   cd vaadi-lake-mulshi/vaadi-travel
    ```
 
 2. **Install dependencies**
@@ -189,15 +198,21 @@ vercel
 
 ## Team
 
+### Website Developed By: Idealizeer Content Solutions
+
 <table>
   <tr>
     <td align="center">
-      <strong>Wajid Daud Tamboli</strong><br/>
-      <sub>Full Stack Developer</sub>
+      <strong>Pankaj Kathane</strong><br/>
+      <sub>🎯 Director</sub>
     </td>
     <td align="center">
-      <strong>Saqib Patel</strong><br/>
-      <sub>Backend Developer</sub>
+      <strong>Janbaj Jadhav</strong><br/>
+      <sub>🎨 UI/UX Designer & Graphic Design</sub>
+    </td>
+    <td align="center">
+      <strong>Wajid Daud Tamboli</strong><br/>
+      <sub>💻 Full Stack Developer</sub>
     </td>
   </tr>
 </table>
@@ -208,7 +223,8 @@ vercel
 
 <p align="center">
   <strong>Idealizeer Content Solutions</strong><br/>
-  Pune, Maharashtra
+  Pune, Maharashtra<br/>
+  <em>Transforming Ideas into Digital Reality</em>
 </p>
 
 ---

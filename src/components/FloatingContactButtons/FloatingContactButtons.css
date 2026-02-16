@@ -1,3 +1,52 @@
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  left: 20px;
+  bottom: 24px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.back-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-primary, #2e88aa);
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 44px;
+  box-shadow: 0 4px 12px rgba(46, 136, 170, 0.35);
+  transition: all 0.3s ease;
+}
+
+.back-to-top__button:hover {
+  background-color: var(--color-primary-dark, #236b87);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(46, 136, 170, 0.45);
+}
+
+.back-to-top__button svg {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
+}
+
+/* Floating Contact Buttons */
 .floating-contact {
   position: fixed;
   right: -1px;
@@ -36,6 +85,22 @@
 }
 
 @media (max-width: 480px) {
+  .back-to-top {
+    left: 15px;
+    bottom: 18px;
+  }
+
+  .back-to-top__button {
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+  }
+
+  .back-to-top__button svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .floating-contact {
     bottom: 18px;
     gap: 8px;
