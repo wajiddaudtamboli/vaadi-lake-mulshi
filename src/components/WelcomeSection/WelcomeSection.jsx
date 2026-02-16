@@ -50,7 +50,7 @@ const WelcomeSection = () => {
         <p className="welcome__description">
           Nestled amidst the tranquil landscapes of Mulshi, Vaadi Villas redefine luxury living with breathtaking serene views, sophisticated architecture, and unmatched exclusivity. Offering a seamless fusion of nature's serenity and modern opulence, these villas are thoughtfully designed to provide a refined lifestyle and the ultimate private retreat.
         </p>
-        <Link to="/contact" className="welcome__cta">ENQUIRE NOW</Link>
+        <Link to="/contact#contact-form" className="welcome__cta" onClick={() => window.scrollTo(0, 0)}>ENQUIRE NOW</Link>
       </div>
 
       {/* Right Side - Image Slideshow */}

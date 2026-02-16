@@ -57,7 +57,7 @@ const Contact = () => {
       </div>
       
       {/* Main Contact Content */}
-      <main className={styles.contactPage}>
+      <main id="contact-form" className={styles.contactPage}>
         {/* Left Column - Info */}
         <div className={styles.infoColumn}>
           <h1 className={styles.title}>
